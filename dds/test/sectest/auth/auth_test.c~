@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <openssl/crypto.h>
+#include "dds/dds_security.h"
+#include "dds/dds_error.h"
+#include "sp_sys_cert.h"
+#include "sp_sys_crypto.h"
+#include "openssl/pem.h"
+#include "sp_auth.h"
+#include <string.h>
+
+static void readFile (const char *path, unsigned char **buf)
+{
+	FILE *fp;
+	long lSize;
+
+	fp = fopen ( path , "rb" );
+	if( !fp ) perror (path),exit(1);
+
+	fseek ( fp , 0L , SEEK_END);
+	lSize = ftell( fp );
+	rewind ( fp );
+
+	/* allocate memory for entire content */
+	if (*buf)
+		free ((void*) *buf);
+	*buf = calloc ( 1, lSize+1 );
+	if( !*buf ) fclose(fp),fputs("memory alloc fails",stderr),exit(1);
+
+	/* copy the file into the buffer */
+	if( 1!=fread( (void *) *buf , lSize, 1 , fp) )
+		fclose(fp),free(buf),fputs("entire read fails",stderr),exit(1);
+
+	fclose(fp);
+}
+
+/* First arg = local cert
+ * Second arg = local private key
+ * Third arg = remote cert */
+
+int main (int argc, const char *argv [])
+{
+	unsigned char *cert_file = NULL;
+	X509 *cert_ptr = NULL;
+	STACK_OF(X509) *chain;
+	EVP_PKEY *pkey = NULL;
+	FILE *fp;
+	DDS_Credentials credential;
+	unsigned local_id, remote_id;
+	int validation;
+	DDS_ReturnCode_t ret;
+
+	/* init functions */
+
+	sp_sec_cert_add ();
+	sp_sec_crypto_add ();
+
+	fp = fopen (argv [1], "rb");
+
+	chain = sk_X509_new_null ();
+
+	while ((cert_ptr = PEM_read_X509(fp, NULL, NULL, NULL)) != NULL) 
+		sk_X509_push (chain, cert_ptr);
+
+
+	fp = fopen (argv [2], "rb");
+
+	pkey = PEM_read_PrivateKey(fp ,NULL, NULL, NULL);
+
+	credential.credentialKind = DDS_SSL_BASED;
+	credential.info.sslData.certificate_list = chain;
+	credential.info.sslData.private_key = pkey;
+
+	readFile (argv [3], &cert_file);
+
+	if ((ret = sp_validate_local_id (&credential, &local_id, &validation)))
+		exit (ret);
+
+	if ((ret = sp_validate_remote_id (&remote_id, local_id, &validation)))
+		exit (ret);
+
+	if ((ret = sp_validate_remote_credentials (local_id, remote_id, 
+						   cert_file, strlen ((const char *) cert_file),
+						   &validation)))
+		exit (ret);
+
+	printf ("test succeeded\r\n");
+	return (0);
+}
