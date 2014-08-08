@@ -5,12 +5,12 @@ QEMU_STM32 ?= ../RTOS/qemu_stm32/arm-softmmu/qemu-system-arm
 ARCH=CM3
 VENDOR=ST
 PLAT=STM32F10x
-CMSIS_LIB=libraries/CMSIS/$(ARCH)
-STM32_LIB=libraries/STM32F10x_StdPeriph_Driver
+CMSIS_LIB=rtos/CMSIS/$(ARCH)
+STM32_LIB=rtos/STM32F10x_StdPeriph_Driver
 
 CMSIS_PLAT_SRC = $(CMSIS_LIB)/DeviceSupport/$(VENDOR)/$(PLAT)
 
-FREERTOS_SRC = libraries/FreeRTOS
+FREERTOS_SRC = rtos/FreeRTOS
 FREERTOS_INC = $(FREERTOS_SRC)/include/                                       
 FREERTOS_PORT_INC = $(FREERTOS_SRC)/portable/GCC/ARM_$(ARCH)/
 
@@ -20,9 +20,9 @@ main.bin: main.c
 	$(CROSS_COMPILE)gcc \
 		-Wl,-Tmain.ld -nostartfiles \
 		-I. -I$(FREERTOS_INC) -I$(FREERTOS_PORT_INC) \
-		-Ilibraries/CMSIS/CM3/CoreSupport \
-		-Ilibraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
-		-Ilibraries/STM32F10x_StdPeriph_Driver/inc \
+		-Irtos/CMSIS/CM3/CoreSupport \
+		-Irtos/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
+		-Irtos/STM32F10x_StdPeriph_Driver/inc \
 		-fno-common -O0 \
 		-gdwarf-2 -g3 \
 		-mcpu=cortex-m3 -mthumb \
