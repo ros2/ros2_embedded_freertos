@@ -4,11 +4,26 @@
 
 This prototype includes:
 
-| chat app |
+| chat|
 |----------|
 |  tinq dds|
 |FreeRTOS|
 
+### File structure:
+
+```.
+├── app
+├── dds
+├── FreeRTOSConfig.h
+├── Makefile
+├── README.md
+└── rtos
+
+```
+
+- the `app` directory contains the final application, in this case the "chat".
+- `dds` contains the DDS related aspects
+- `rtos` contain the RTOS (FreeDDS) related files
 
 ### Compile the code
 

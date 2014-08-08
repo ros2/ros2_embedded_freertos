@@ -14,11 +14,11 @@ FREERTOS_SRC = rtos/FreeRTOS
 FREERTOS_INC = $(FREERTOS_SRC)/include/                                       
 FREERTOS_PORT_INC = $(FREERTOS_SRC)/portable/GCC/ARM_$(ARCH)/
 
-all: main.bin
+all: peripherals
 
-main.bin: main.c
+peripherals: app/peripherals/main.c
 	$(CROSS_COMPILE)gcc \
-		-Wl,-Tmain.ld -nostartfiles \
+		-Wl,-Tapp/peripherals/main.ld -nostartfiles \
 		-I. -I$(FREERTOS_INC) -I$(FREERTOS_PORT_INC) \
 		-Irtos/CMSIS/CM3/CoreSupport \
 		-Irtos/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
@@ -44,8 +44,8 @@ main.bin: main.c
 		$(FREERTOS_SRC)/portable/GCC/ARM_CM3/port.c \
 		$(FREERTOS_SRC)/portable/MemMang/heap_1.c \
 		\
-		stm32_p103.c \
-		main.c
+		app/peripherals/stm32_p103.c \
+		app/peripherals/main.c
 	$(CROSS_COMPILE)objcopy -Obinary main.elf main.bin
 	$(CROSS_COMPILE)objdump -S main.elf > main.list
 
