@@ -1,3 +1,7 @@
+#
+#	This makefile produces a simple binary that tests the STM32 peripherals
+#
+
 CROSS_COMPILE=arm-none-eabi-
 QEMU_STM32 ?= ../../../RTOS/qemu_stm32/arm-softmmu/qemu-system-arm
 #QEMU_STM32 ?= qemu-system-arm
