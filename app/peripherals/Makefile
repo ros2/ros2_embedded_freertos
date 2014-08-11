@@ -1,28 +1,28 @@
 CROSS_COMPILE=arm-none-eabi-
-QEMU_STM32 ?= ../RTOS/qemu_stm32/arm-softmmu/qemu-system-arm
+QEMU_STM32 ?= ../../../RTOS/qemu_stm32/arm-softmmu/qemu-system-arm
 #QEMU_STM32 ?= qemu-system-arm
 
 ARCH=CM3
 VENDOR=ST
 PLAT=STM32F10x
-CMSIS_LIB=rtos/CMSIS/$(ARCH)
-STM32_LIB=rtos/STM32F10x_StdPeriph_Driver
+CMSIS_LIB=../../rtos/CMSIS/$(ARCH)
+STM32_LIB=../../rtos/STM32F10x_StdPeriph_Driver
 
 CMSIS_PLAT_SRC = $(CMSIS_LIB)/DeviceSupport/$(VENDOR)/$(PLAT)
 
-FREERTOS_SRC = rtos/FreeRTOS
+FREERTOS_SRC = ../../rtos/FreeRTOS
 FREERTOS_INC = $(FREERTOS_SRC)/include/                                       
 FREERTOS_PORT_INC = $(FREERTOS_SRC)/portable/GCC/ARM_$(ARCH)/
 
 all: peripherals
 
-peripherals: app/peripherals/main.c
+peripherals: main.c
 	$(CROSS_COMPILE)gcc \
-		-Wl,-Tapp/peripherals/main.ld -nostartfiles \
+		-Wl,-Tmain.ld -nostartfiles \
 		-I. -I$(FREERTOS_INC) -I$(FREERTOS_PORT_INC) \
-		-Irtos/CMSIS/CM3/CoreSupport \
-		-Irtos/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
-		-Irtos/STM32F10x_StdPeriph_Driver/inc \
+		-I../../rtos/CMSIS/CM3/CoreSupport \
+		-I../../rtos/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
+		-I../../rtos/STM32F10x_StdPeriph_Driver/inc \
 		-fno-common -O0 \
 		-gdwarf-2 -g3 \
 		-mcpu=cortex-m3 -mthumb \
@@ -44,8 +44,8 @@ peripherals: app/peripherals/main.c
 		$(FREERTOS_SRC)/portable/GCC/ARM_CM3/port.c \
 		$(FREERTOS_SRC)/portable/MemMang/heap_1.c \
 		\
-		app/peripherals/stm32_p103.c \
-		app/peripherals/main.c
+		stm32_p103.c \
+		main.c
 	$(CROSS_COMPILE)objcopy -Obinary main.elf main.bin
 	$(CROSS_COMPILE)objdump -S main.elf > main.list
 

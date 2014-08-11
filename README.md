@@ -11,19 +11,38 @@ This prototype includes:
 
 ### File structure:
 
-```.
+```
+.
 ├── app
+│   ├── chat
+│   └── peripherals
+```
+the `app` directory contains the final applications.
+```
 ├── dds
-├── FreeRTOSConfig.h
-├── Makefile
-├── README.md
+│   ├── api
+│   ├── apps
+│   ├── doc
+│   ├── plugins
+│   ├── src
+│   ├── test
+│   └── tools
+```
+`dds` contains the DDS related aspects
+```
 └── rtos
+```
+`rtos` contain the RTOS (FreeDDS) related files, network stack (lwIP), and drivers (Ethernet, peripherals, etc.)
+```
+    ├── CMSIS
+    ├── FreeRTOS
+    ├── lwip-1.4.1
+    ├── STM32F10x_StdPeriph_Driver
+    ├── STM32F4x7_ETH_Driver
+    └── STM32F4xx_StdPeriph_Driver
+
 
 ```
-
-- the `app` directory contains the final application, in this case the "chat".
-- `dds` contains the DDS related aspects
-- `rtos` contain the RTOS (FreeDDS) related files
 
 ### Compile the code
 

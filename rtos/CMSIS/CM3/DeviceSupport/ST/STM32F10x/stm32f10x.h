@@ -8294,7 +8294,7 @@ typedef struct
   */
 
 #ifdef USE_STDPERIPH_DRIVER
-  #include "app/peripherals/stm32f10x_conf.h"
+  #include "stm32f10x_conf.h"
 #endif
 
 /** @addtogroup Exported_macro
