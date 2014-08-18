@@ -134,7 +134,10 @@ __IO uint32_t Frame_Rx_index;
   * @param  nCount: specifies the delay time length.
   * @retval None
   */
-static void ETH_Delay(__IO uint32_t nCount)
+
+//#error "includes delay"   
+// static void ETH_Delay(__IO uint32_t nCount)
+void ETH_Delay(__IO uint32_t nCount)
 {
   __IO uint32_t index = 0; 
   for(index = nCount; index != 0; index--)

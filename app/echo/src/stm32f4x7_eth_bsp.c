@@ -25,6 +25,7 @@
   ******************************************************************************
   */
 
+#include "stm32f4xx_conf.h"
 /* Includes ------------------------------------------------------------------*/
 #include "lwip/opt.h"
 #include "stm32f4x7_eth.h"
@@ -412,6 +413,7 @@ void ETH_link_callback(struct netif *netif)
   uint8_t iptxt[20];
 #endif /* USE_DHCP */
 
+#ifdef USE_LCD
   /* Clear LCD */
   LCD_ClearLine(Line4);
   LCD_ClearLine(Line5);
@@ -419,7 +421,8 @@ void ETH_link_callback(struct netif *netif)
   LCD_ClearLine(Line7);
   LCD_ClearLine(Line8);
   LCD_ClearLine(Line9);
-
+#endif
+  
   if(netif_is_link_up(netif))
   {
     /* Restart the autonegotiation */

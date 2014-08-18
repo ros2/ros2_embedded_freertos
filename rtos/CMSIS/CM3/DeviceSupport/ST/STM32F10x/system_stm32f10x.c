@@ -209,6 +209,7 @@ static void SetSysClock(void);
   * @param  None
   * @retval None
   */
+#error "second system init"
 void SystemInit (void)
 {
   /* Reset the RCC clock configuration to the default reset state(for debug purpose) */

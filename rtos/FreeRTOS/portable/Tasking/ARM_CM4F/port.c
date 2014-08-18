@@ -216,6 +216,7 @@ void vPortExitCritical( void )
 }
 /*-----------------------------------------------------------*/
 
+#error "including CM4 SysTick_Handler"
 void SysTick_Handler( void )
 {
 unsigned long ulDummy;

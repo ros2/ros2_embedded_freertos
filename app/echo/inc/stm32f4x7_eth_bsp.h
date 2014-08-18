@@ -35,20 +35,20 @@
 
 
 /* Includes ------------------------------------------------------------------*/
-#if defined (USE_STM324xG_EVAL)
-  #include "stm324xg_eval.h"
-  #include "stm324xg_eval_lcd.h"
-
-#elif defined (USE_STM324x7I_EVAL) 
-  #include "stm324x7i_eval.h"
-  #include "stm324x7i_eval_lcd.h"
-
-#else
- #error "Please select first the Evaluation board used in your application (in Project Options)"
-#endif
+//#if defined (USE_STM324xG_EVAL)
+//  #include "stm324xg_eval.h"
+//  #include "stm324xg_eval_lcd.h"
+//
+//#elif defined (USE_STM324x7I_EVAL) 
+//  #include "stm324x7i_eval.h"
+//  #include "stm324x7i_eval_lcd.h"
+//
+//#else
+// #error "Please select first the Evaluation board used in your application (in Project Options)"
+//#endif
 
 #include "netif.h"
-
+#include "stm32f4xx_exti.h"
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 #define DP83848_PHY_ADDRESS       0x01 /* Relative to STM324xG-EVAL Board */

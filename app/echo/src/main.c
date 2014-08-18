@@ -31,6 +31,7 @@
 #include "main.h"
 #include "tcpip.h"
 #include "serial_debug.h"
+#include "misc.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -110,7 +111,7 @@ void Main_task(void * pvParameters)
   LwIP_Init();
 
   /* Initialize tcp echo server */
-  tcpecho_init();
+  //tcpecho_init();
 
   /* Initialize udp echo server */
   udpecho_init();
@@ -120,14 +121,18 @@ void Main_task(void * pvParameters)
   xTaskCreate(LwIP_DHCP_task, (int8_t *)"DHCP", configMINIMAL_STACK_SIZE * 2, NULL,DHCP_TASK_PRIO, NULL);
 #endif
 
+#if 0
   /* Start toogleLed4 task : Toggle LED4  every 250ms */
   xTaskCreate(ToggleLed4, (int8_t *)"LED4", configMINIMAL_STACK_SIZE, NULL, LED_TASK_PRIO, NULL);
+#endif
+
   for( ;; )
   {
     vTaskDelete(NULL);
   }
 }
 
+#if 0
 /**
   * @brief  Toggle Led4 task
   * @param  pvParameters not used
@@ -151,6 +156,8 @@ void ToggleLed4(void * pvParameters)
   }
 }
 
+#endif
+
 /**
   * @brief  Initializes the STM324xG-EVAL's LCD and LEDs resources.
   * @param  None
@@ -163,12 +170,14 @@ void LCD_LED_Init(void)
   STM324xG_LCD_Init();
 #endif
 
+#if 0
   /* Initialize STM324xG-EVAL's LEDs */
   STM_EVAL_LEDInit(LED1);
   STM_EVAL_LEDInit(LED2);
   STM_EVAL_LEDInit(LED3);
   STM_EVAL_LEDInit(LED4);
-  
+#endif 
+
 #ifdef USE_LCD
   /* Clear the LCD */
   LCD_Clear(Black);
@@ -216,6 +225,20 @@ void assert_failed(uint8_t* file, uint32_t line)
   {}
 }
 #endif
+
+void myTraceCreate      (){
+}
+
+void myTraceSwitchedIn  (){
+}
+
+void myTraceSwitchedOut (){
+}
+
+void vApplicationTickHook()
+{
+}
+
 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

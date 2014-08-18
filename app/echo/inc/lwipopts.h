@@ -88,7 +88,7 @@ a lot of data that needs to be copied, this should be set high. */
 
 
 /* ---------- TCP options ---------- */
-#define LWIP_TCP                1
+#define LWIP_TCP                0
 #define TCP_TTL                 255
 
 /* Controls if TCP should queue segments that arrive out of
