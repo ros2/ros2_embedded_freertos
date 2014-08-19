@@ -159,6 +159,7 @@ app: src/main.c
 		$(APP_SRC)/tcpecho.c \
 		$(APP_SRC)/udpecho.c \
 		stubs.c \
+		console.c \
 		src/main.c \
 
 	$(CROSS_COMPILE)objcopy -Obinary main.elf main.bin

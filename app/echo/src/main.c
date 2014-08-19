@@ -32,6 +32,7 @@
 #include "tcpip.h"
 #include "serial_debug.h"
 #include "misc.h"
+#include "console.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -94,11 +95,16 @@ int main(void)
        system_stm32f4xx.c file
      */
 
+  // Initialize the console
+  console_init();
+
  /* Configures the priority grouping: 4 bits pre-emption priority */
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
+
   // Configure the Ethernet
   configureEthernet();
+
 
   /* main task */
   xTaskCreate(Main_task, 
@@ -115,6 +121,8 @@ int main(void)
               NULL,
               tskIDLE_PRIORITY + 5, 
               NULL);
+
+  //__enable_irq();
   
   /* Start scheduler */
   vTaskStartScheduler();
@@ -250,16 +258,23 @@ void leds_init()
                     (1 << (PORTE_LED1 * 2));
 }
 
+void toogleLED(void)
+{
+    /* Toggle the LED. */
+  //GPIOE->ODR ^= 0x00000018;
+  //GPIOE->ODR ^= 0x00000010;
+  GPIOE->ODR ^= 0x00000008;
+
+  /* Wait one second. */
+  vTaskDelay(100);
+}
+
 void led_flash_task(void *pvParameters)
 {
   leds_init();
 
   while (1) {
-    /* Toggle the LED. */
-    GPIOE->ODR ^= 0x00000018;
-
-    /* Wait one second. */
-    vTaskDelay(100);
+    toogleLED();
   }
 }
 

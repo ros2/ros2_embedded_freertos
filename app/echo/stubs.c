@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/stat.h>
-//#include "console.h"
+#include "console.h"
 
 extern int _end;
 
@@ -23,7 +23,7 @@ int _getpid() { return 1; }
 
 int _write(__attribute__((unused)) int fd, const void *buf, size_t count)
 {
-  //console_send_block((uint8_t *)buf, count);
+  console_send_block((uint8_t *)buf, count);
   return count;
 }
 int _close(__attribute__((unused)) int fd) { return -1; }

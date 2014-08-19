@@ -47,6 +47,15 @@ extern __IO uint32_t  EthStatus;
 __IO uint8_t DHCP_state;
 #endif /* USE_DHCP */
 
+void toogleLEDnet(void)
+{
+    /* Toggle the LED. */
+  GPIOE->ODR ^= 0x00000010;
+
+  /* Wait one second. */
+  vTaskDelay(100);
+}
+
 /* Private functions ---------------------------------------------------------*/
 /**
   * @brief  Initializes the lwIP stack
@@ -183,7 +192,8 @@ void LwIP_DHCP_task(void * pvParameters)
       case DHCP_WAIT_ADDRESS:
       {
         /* Toggle LED1 */
-        STM_EVAL_LEDToggle(LED1);
+        toogleLEDnet();
+        //STM_EVAL_LEDToggle(LED1);
         
         /* Read the new IP address */
         IPaddress = xnetif.ip_addr.addr;
@@ -213,7 +223,8 @@ void LwIP_DHCP_task(void * pvParameters)
           LCD_DisplayStringLine(Line9, iptxt);
 #endif  
           /* end of DHCP process: LED1 stays ON*/
-          STM_EVAL_LEDOn(LED1);
+        toogleLEDnet();
+        //STM_EVAL_LEDToggle(LED1);
         }
         else
         {
@@ -249,7 +260,8 @@ void LwIP_DHCP_task(void * pvParameters)
             LCD_DisplayStringLine(Line9, iptxt);
 #endif
             /* end of DHCP process: LED1 stays ON*/
-            STM_EVAL_LEDOn(LED1);
+        toogleLEDnet();
+        //STM_EVAL_LEDToggle(LED1);
           }
         }
       }
