@@ -6,3 +6,5 @@ mkromfs
 test-romfs.bin
 gdb.txt
 sched.vcd
+tools/openocd-source
+tools/openocd

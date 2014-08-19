@@ -127,6 +127,7 @@ app: src/main.c
 		-fno-common -O0 \
 		-gdwarf-2 -g3 \
 		-mcpu=cortex-m3 -mthumb \
+		-std=c99 \
 		-o main.elf \
 		\
 		$(CMSIS_PLAT_SRC)/system_stm32f4xx.c \
@@ -171,7 +172,7 @@ qemudbg: main.bin $(QEMU_STM32)
 		-gdb tcp::3333 -S \
 		-kernel main.bin
 
-gdb: main.bin $(QEMU_STM32)
+gdb-qemu: main.bin $(QEMU_STM32)
 	$(QEMU_STM32) -M stm32-p103 \
 		-gdb tcp::3333 -S \
 		-kernel main.elf
@@ -184,3 +185,19 @@ emu: main.bin
 
 clean:
 	rm -f *.elf *.bin *.list
+
+OPENOCD=../../tools/openocd/bin/openocd
+program: app
+	$(OPENOCD) -f ../../tools/olimex-arm-usb-tiny-h.cfg -f ../../tools/stm32.cfg -c "init; halt; flash write_image erase main.bin 0x8000000; verify_image main.bin 0x8000000; sleep 100; reset run; sleep 100; shutdown"
+
+dump_flash:
+	$(OPENOCD) -f ../../tools/olimex-arm-usb-tiny-h.cfg -f ../../tools/stm32.cfg -c "init; halt; dump_image main.bin.dump 0x8000000 0x1000; reset run; shutdown"
+
+gdb_server: app
+	$(OPENOCD) -f ../../tools/olimex-arm-usb-tiny-h.cfg -f ../../tools/stm32.cfg -c "init; halt"
+	
+gdb: app
+	$(CROSS_COMPILE)gdb main.elf -x ../../tools/gdb_init_commands
+
+reset:
+	$(OPENOCD) -f ../../tools/olimex-arm-usb-tiny-h.cfg -f ../../tools/stm32.cfg -c "init; halt; reset run; shutdown"

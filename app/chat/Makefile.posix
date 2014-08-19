@@ -111,13 +111,11 @@ ${EXECUTABLE}:	${prog_OBJS}
 #######################################################
 # Setup Compile Environment
 
-# Cross compiler
-CROSS_COMPILE		=arm-none-eabi-
-CC       = $(CROSS_COMPILE)gcc
+CC       = gcc
 
-INC_PATH = -I${BASE_DDS}/include -I../../dds/api/headers/ -I/usr/include/libxml2 -I../../dds/plugins/security/ -I${NSECP}/ -I../../dds/qeo-c-import/openssl/outputNative/openssl/HOSTLINUX/Debug/src/openssl-1.0.1f/include/
+INC_PATH = -I${BASE_DDS}/include -I../../dds/api/headers/ -I/usr/include/libxml2 -I../../dds/plugins/security/ -I${NSECP}/ -I../../qeo-c-import/openssl/outputNative/openssl/HOSTLINUX/Debug/src/openssl-1.0.1f/include/
 #LIB_PATH =
-LIB_PATH = -L../../dds/qeo-c-import/openssl/output/install/usr/local/lib
+LIB_PATH = -L../../qeo-c-import/openssl/output/install/usr/local/lib
 LIBS     = 
 
 DEFINES  = -DPTHREADS_USED -DFORCE_MALLOC -DTTY_NORMAL -DRTPS_USED -DCDD_USED -DDDS_DEBUG \

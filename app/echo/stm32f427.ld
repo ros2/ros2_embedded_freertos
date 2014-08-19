@@ -8,7 +8,7 @@ SECTIONS
 {
   .text :
   {
-    KEEP(*(.isr_vectors .isr_vectors.*))
+    KEEP(*(.isr_vector .isr_vector.*))
     . = 0x400; /* make it obvious when the vector table is missing */
     *(.text .text.* .gnu.linkonce.t*)
     *(.glue_7)

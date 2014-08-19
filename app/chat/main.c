@@ -17,7 +17,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <unistd.h>
-#include <poll.h>
+//#include <poll.h>
 #include "thread.h"
 #include "libx.h"
 #include "tty.h"
