@@ -9,40 +9,6 @@ This prototype includes:
 |  tinq dds|
 |FreeRTOS|
 
-### File structure:
-
-```
-.
-├── app
-│   ├── chat
-│   └── peripherals
-```
-the `app` directory contains the final applications.
-```
-├── dds
-│   ├── api
-│   ├── apps
-│   ├── doc
-│   ├── plugins
-│   ├── src
-│   ├── test
-│   └── tools
-```
-`dds` contains the DDS related aspects
-```
-└── rtos
-```
-`rtos` contain the RTOS (FreeDDS) related files, network stack (lwIP), and drivers (Ethernet, peripherals, etc.)
-```
-    ├── CMSIS
-    ├── FreeRTOS
-    ├── lwip-1.4.1
-    ├── STM32F10x_StdPeriph_Driver
-    ├── STM32F4x7_ETH_Driver
-    └── STM32F4xx_StdPeriph_Driver
-
-
-```
 
 ### Compile the code
 
