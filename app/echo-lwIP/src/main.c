@@ -109,7 +109,7 @@ int main(void)
   /* main task */
   xTaskCreate(Main_task, 
               (int8_t *)"Main",
-              configMINIMAL_STACK_SIZE * 2 * 10, 
+              configMINIMAL_STACK_SIZE * 2 * 5, 
               NULL,
               MAIN_TASK_PRIO, 
               NULL);

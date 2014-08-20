@@ -57,10 +57,12 @@ static void udpecho_thread(void *arg)
   conn = netconn_new(NETCONN_UDP);
   if (conn!= NULL)
   {
-    err = netconn_bind(conn, IP_ADDR_ANY, 7);
-    printf("netconn binded\n");
+    err = netconn_bind(conn, IP_ADDR_ANY, 17500);
+    printf("err: %d\n", err);
+    printf("ERR_OK: %d\n", ERR_OK);
     if (err == ERR_OK)
     {
+      printf("netconn binded\n");
       while (1) 
       {
         printf("before getting blocked\n");
@@ -90,10 +92,17 @@ static void udpecho_thread(void *arg)
     printf("can create new UDP netconn");
   }
 }
+
+publish_thread(void *arg)
+{
+
+}
+
 /*-----------------------------------------------------------------------------------*/
 void udpecho_init(void)
 {
   printf("before sys_thread_new\n");
+  printf("DEFAULT_THREAD_STACKSIZE: %d\n", DEFAULT_THREAD_STACKSIZE);
   sys_thread_new("udpecho_thread", udpecho_thread, NULL, DEFAULT_THREAD_STACKSIZE,UDPECHO_THREAD_PRIO );
   printf("after sys_thread_new\n");
 }
