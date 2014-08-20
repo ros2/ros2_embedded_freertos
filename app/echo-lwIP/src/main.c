@@ -109,7 +109,7 @@ int main(void)
   /* main task */
   xTaskCreate(Main_task, 
               (int8_t *)"Main",
-              configMINIMAL_STACK_SIZE * 2, 
+              configMINIMAL_STACK_SIZE * 2 * 10, 
               NULL,
               MAIN_TASK_PRIO, 
               NULL);
@@ -121,8 +121,6 @@ int main(void)
               NULL,
               tskIDLE_PRIORITY + 5, 
               NULL);
-
-  //__enable_irq();
   
   /* Start scheduler */
   vTaskStartScheduler();
@@ -288,14 +286,11 @@ void Main_task(void * pvParameters)
 #ifdef SERIAL_DEBUG
   DebugComPort_Init();
 #endif
-
-  /*Initialize LCD and Leds */ 
-  LCD_LED_Init();
   
   /* configure ethernet (GPIOs, clocks, MAC, DMA) */ 
   ETH_BSP_Config();
 
-  /* Initilaize the LwIP stack */
+  /* Initialize the LwIP stack */
   LwIP_Init();
 
   /* Initialize tcp echo server */

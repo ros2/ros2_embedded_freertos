@@ -37,6 +37,7 @@
 
 #include "lwip/api.h"
 #include "lwip/sys.h"
+#include "console.h"
 
 
 #define UDPECHO_THREAD_PRIO  ( tskIDLE_PRIORITY + 5 )
@@ -52,18 +53,23 @@ static void udpecho_thread(void *arg)
   
   LWIP_UNUSED_ARG(arg);
 
+  printf("netconn_new created\n");
   conn = netconn_new(NETCONN_UDP);
   if (conn!= NULL)
   {
     err = netconn_bind(conn, IP_ADDR_ANY, 7);
+    printf("netconn binded\n");
     if (err == ERR_OK)
     {
       while (1) 
       {
+        printf("before getting blocked\n");
         recv_err = netconn_recv(conn, &buf);
+        printf("packet received\n");
       
         if (recv_err == ERR_OK) 
         {
+          printf("packet in good shape\n");
           addr = netbuf_fromaddr(buf);
           port = netbuf_fromport(buf);
           netconn_connect(conn, addr, port);
@@ -87,7 +93,9 @@ static void udpecho_thread(void *arg)
 /*-----------------------------------------------------------------------------------*/
 void udpecho_init(void)
 {
+  printf("before sys_thread_new\n");
   sys_thread_new("udpecho_thread", udpecho_thread, NULL, DEFAULT_THREAD_STACKSIZE,UDPECHO_THREAD_PRIO );
+  printf("after sys_thread_new\n");
 }
 
 #endif /* LWIP_NETCONN */

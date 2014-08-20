@@ -74,7 +74,7 @@ void ETH_BSP_Config(void)
   ETH_GPIO_Config();
 
   /* Config NVIC for Ethernet */
-  ETH_NVIC_Config();
+  //ETH_NVIC_Config();
 
   /* Configure the Ethernet MAC/DMA */
   ETH_MACDMA_Config();
