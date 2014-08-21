@@ -149,6 +149,7 @@ DDS_EXPORT void DDS_Debug_dump_static (
 	int field_names
 );
 
+#ifdef XTYPES_USED
 /* Dump a dynamic Data item. */
 DDS_EXPORT void DDS_Debug_dump_dynamic (
 	unsigned indent,
@@ -158,6 +159,7 @@ DDS_EXPORT void DDS_Debug_dump_dynamic (
 	int secure,
 	int field_names
 );
+#endif
 
 /* === RTPS tracing support functions ======================================= */
 
