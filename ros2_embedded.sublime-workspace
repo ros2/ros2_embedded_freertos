@@ -36,19 +36,59 @@
 	"buffers":
 	[
 		{
-			"file": "app/echo-lwIP/console.c",
+			"file": "app/chat/main.c",
 			"settings":
 			{
-				"buffer_size": 1121,
+				"buffer_size": 16439,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/echo-lwIP/src/main.c",
+			"file": "rtos/nuttx/apps/Kconfig",
 			"settings":
 			{
-				"buffer_size": 13432,
-				"line_ending": "Windows"
+				"buffer_size": 775,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/nuttx/apps/Make.defs",
+			"settings":
+			{
+				"buffer_size": 2274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/networking/Makefile",
+			"settings":
+			{
+				"buffer_size": 2872,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/nuttx/apps/Makefile",
+			"settings":
+			{
+				"buffer_size": 7032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/nuttx/apps/examples/Make.defs",
+			"settings":
+			{
+				"buffer_size": 6826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/nuttx/nuttx/Makefile",
+			"settings":
+			{
+				"buffer_size": 2081,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -58,6 +98,26 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"syntax",
+				"Set Syntax: CMake"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
 			[
 				"build",
 				"Build: apps: echo"
@@ -115,16 +175,8 @@
 				"Git: Log All"
 			],
 			[
-				"git com",
-				"Git: Commit"
-			],
-			[
 				"git stat",
 				"Git: Status"
-			],
-			[
-				"git add",
-				"Git: Add..."
 			],
 			[
 				"inst",
@@ -153,10 +205,6 @@
 			[
 				"save",
 				"Project: Save As"
-			],
-			[
-				"git ad",
-				"Git: Add Current File"
 			],
 			[
 				"git push",
@@ -192,11 +240,122 @@
 	},
 	"file_history":
 	[
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/stm32f4x7_eth_bsp.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/System.map",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/win.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/xcdr.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/networking/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/Makefile.unix",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/sock.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/dds/dds_debug.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dcps/dcps_reader.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/cdr.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/sock.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/sql/parse.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/Makefile_component",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/sock.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/dds/dds_aux.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/ctrace.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/dds.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/win.c",
+		"/home/victor/Dropbox/dds/src/include/thread.h",
+		"/home/victor/.config/sublime-text-3/Packages/User/ros2_embedded/ros2_embedded.sublime-build",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile.posix",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/pool.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/headers/enet.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/sys.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/thread.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/timer.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/tty.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/strseq.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/str.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/skiplist.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/random.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/prof.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/pool.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/hash.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/handle.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/nmatch.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/md5.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/log.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/llist.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/ipc.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/libx.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/ipfilter.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/heap.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/hash.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/error.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/db.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/config.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/config.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/cmdline.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/enet.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/trans/ip/ri_tcp.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/chat_msg.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dcps/dcps_writer.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/xtypes/xtopic.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/trans/ip/rtps_ip.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile.linux",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile.stm32f4",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/trans/ip/ri_udp.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/trans/ip/ri_udp.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/error.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/tty.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/str.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/skiplist.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/prof.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/typecode/typecode.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/dcps.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dynip/di_linux.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dynip/di_darwin.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/disc/disc_cdd.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/atomic.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/builtin.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/bytecode.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/cmdline.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/config.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/dynip.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/heap.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/rtps.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/rtps/rtps_mux.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/cache.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/thread.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/udpecho.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/include/task.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stubs.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/doc/user_manual.txt",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/doc/dds_full.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/sys_arch.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stm32f427.ld",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/headers/stm32f4xx_conf.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/headers/FreeRTOSConfig.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/main.list",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Source/Templates/TrueSTUDIO/startup_stm32f4xx.s",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/inc/FreeRTOSConfig.h.default",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/include/FreeRTOS.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/FreeRTOSConfig.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/src/enet.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/inc/misc.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/stm32_p103.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stm32f4xx_it.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/serial_debug.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/console.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/console.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/main.bin",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/stm32f4x7_eth_bsp.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Include/stm32f4xx.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Include/system_stm32f4xx.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/sys_arch.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/netconf.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stm32f4x7_eth_bsp.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/queue.c",
@@ -204,122 +363,11 @@
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/timers.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stm32f4x7_eth_conf.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/udpecho.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/main.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/api/tcpip.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/FreeRTOSConfig.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/portable/GCC/ARM_CM3/port.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/lwipopts.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stubs.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/stm32f4xx_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/system_stm32f4xx.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stm32f427.ld",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/doc/sys_arch.txt",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/sys_arch.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/main.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/stm32f4xx_it.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/stm32f4x7_eth_bsp.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/src/netconf.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/README.md",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/main.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4x7_ETH_Driver/src/stm32f4x7_eth.c",
-		"/home/victor/.config/sublime-text-3/Packages/User/ros2_embedded/ros2_embedded.sublime-build",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/src/main.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/build",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Source/Templates/TrueSTUDIO/startup_stm32f4xx.s",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/sys.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/thread.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/cmdline.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/sock.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/heap.c",
-		"/home/victor/Downloads/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stm32f4xx_it.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/tools/smaps",
-		"/home/victor/Dropbox/dds/src/include/thread.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/core/init.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/main.ld",
-		"/home/victor/Downloads/stm32f427.ld",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/portable/Tasking/ARM_CM4F/port.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/core/timers.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/tasks.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c",
-		"/build/buildd/newlib-2.1.0/newlib/libc/reent/readr.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/portable/Softune/MB96340/__STD_LIB_sbrk.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/core/def.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/FreeRTOSConfig.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/core/tcp.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/doc/rawapi.txt",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/doc/snmp_agent.txt",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/doc/contrib.txt",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/doc/savannah.txt",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/main.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h",
-		"/home/victor/.config/sublime-text-3/Packages/User/ros2_embedded/ros2_embedded.tmLanguage",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/chat_msg.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/dds/dds_dreader.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/bw/security.xml",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/bytecode.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/src/stm32f4x7_eth_bsp.c",
-		"/home/victor/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/Makefile",
-		"/home/victor/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/ros2_embedded.sublime-build",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/ros2_embedded.sublime-project",
-		"/home/victor/ros2_ws2/src/osrf_pycommon/docs/cli_utils.rst",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_interface/ros_middleware_interface/include/ros_middleware_interface/handles.h",
-		"/home/victor/ros2_ws2/install/include/ros_middleware_connext_cpp/MessageTypeSupport.h",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_connext/ros_middleware_connext_xtypes_dynamic_cpp/src/functions.cpp",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_connext/ros_middleware_connext_cpp/include/ros_middleware_connext_cpp/MessageTypeSupport.h",
-		"/home/victor/ros2_ws2/src/ros2/rclcpp/rclcpp/include/rclcpp/executor/SingleThreadExecutor.h",
-		"/home/victor/ros2_ws2/build/simple_msgs/rosidl_typesupport_connext_cpp/simple_msgs/dds_connext/Int32_TypeSupport.cpp",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_connext/rosidl_typesupport_connext_cpp/CMakeLists.txt",
-		"/home/victor/ros2_ws2/install/include/std_msgs/dds_connext/Int32_TypeSupport.cpp",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_opensplice/ros_middleware_opensplice_cpp/src/functions.cpp",
-		"/home/victor/ros2_ws2/src/ros2.sublime-project",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_connext/ros_middleware_connext_cpp/src/functions.cpp",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_interface/ros_middleware_interface/package.xml",
-		"/home/victor/ros2_ws2/src/ament/ament_tools/ament_tools/build_type.py",
-		"/home/victor/ros2_ws2/src/ament/ament_tools/ament_tools/build_type_discovery.py",
-		"/home/victor/ros2_ws2/src/osrf_pycommon/build/lib/osrf_pycommon/process_utils/execute_process_nopty.py",
-		"/home/victor/ros2_ws2/src/osrf_pycommon/build/lib/osrf_pycommon/process_utils/impl.py",
-		"/home/victor/ros2_ws2/src/ros2/ros_middleware_opensplice/rosidl_typesupport_opensplice_cpp/bin/rosidl_typesupport_opensplice_cpp",
-		"/home/victor/.config/sublime-text-3/Packages/User/ament/ament_build.sublime-build",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/serial_debug.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/main.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/stm32f4x7_eth_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/stm32_p103.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/stm32f4xx_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f10x/stm32f10x_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals_stm32f4x7/stm32_p103.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Include/core_cm3.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/CM3/CoreSupport/core_cm3.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/CM3/CoreSupport/core_cm3.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/stm32f10x_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/stm32_p103.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/stm32_p103.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/main.ld",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/FreeRTOSConfig.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.ld",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/FreeRTOSConfig.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/README.md",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4x7_ETH_Driver/inc/stm32f4x7_eth_conf_template.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/include/lwip/api.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/include/lwip/sys.h",
-		"/home/victor/Dropbox/OSRF/STM32F4x7_ETH_LwIP_V1.1.0/Utilities/Third_Party/lwip-1.4.1/port/STM32F4x7/Standalone/ethernetif.c",
-		"/home/victor/Dropbox/OSRF/STM32F4x7_ETH_LwIP_V1.1.0/Utilities/Third_Party/lwip-1.4.1/port/STM32F4x7/Standalone/ethernetif.h"
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stubs.c"
 	],
 	"find":
 	{
@@ -339,9 +387,112 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"#define	thread_t",
+			"#define thread_t",
+			"#define( )+thread_t",
+			"#define( )*thread_t",
+			"thread_t",
+			"#else",
+			"main",
+			"#else",
+			"Linux",
+			"#else",
+			"DDS_ReturnCode_t cdr_unmarshall",
+			"cdr_unmarshall",
+			"xty",
+			"DXTYPES_USED",
+			"-DLOG_FILE",
+			"DLOG_FILE",
+			" ${",
+			"} ",
+			"DPTHREADS_USED",
+			"sql_CSRCS",
+			"SQL",
+			"POLLRDNORM",
+			"#define( )*POLLRDNORM",
+			"#define( )*POLLIN",
+			"DDS_Handle_attach",
+			"#define( )*POLLRDNORM",
+			"#define(\\.)*POLLRDNORM",
+			"#define (\\.)*POLLRDNORM",
+			"thread_t",
+			"#define thread_t",
+			"#define HANDLE",
+			"HANDLE",
+			"thread_t",
+			"define",
+			"POLLIN",
+			"PTHREADS_USED",
+			"endif",
+			"ppoll",
+			"co",
+			"CO",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"#else",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"^\\}$",
+			"^\\{$",
+			"sql",
+			"^\\}$",
+			"^\\{$",
+			"^{$",
+			"${",
+			"^{",
+			"\\^{\\",
+			"^{",
+			"(?<expo>public\\:|protected\\:|private\\:) (?<ret>(const )*(void|int|unsigned int|long|unsigned long|float|double|(class .*)|(enum .*))) (?<decl>__thiscall|__cdecl|__stdcall|__fastcall|__clrcall) (?<ns>.*)\\:\\:(?<class>(.*)((<.*>)*))\\:\\:(?<method>(.*)((<.*>)*))\\((?<params>((.*(<.*>)?)(,)?)*)\\)",
+			"chat_msg.h",
+			"main.c",
+			"dcps_write",
+			"DDS_DynamicDataWriter_write",
+			"rtps_tcpv4",
+			"rtps_ip_send",
+			"rtps_udp_send",
+			"rtps_ip_send",
+			"rtps_udp_send",
+			"WIN",
+			"WIND",
+			"define",
+			"PendSV_Handler",
+			"xPortPendSVHandler",
+			"heap_1.c",
+			"heap_4.c",
+			"_estack",
+			"configMINIMAL_STACK_SIZE",
+			"UDPECHO_THREAD_PRIO",
+			"DEFAULT_THREAD_STACKSIZE",
+			"sys_thread_new",
+			"configMINIMAL_STACK_SIZE",
+			"networking_task",
+			"eth_dispatch_udp",
+			"tactile",
+			"dmxl",
+			"NVIC_PriorityGroup_4",
+			"setup_hardware",
+			"console_init",
+			"startup_stm32f4xx",
+			"Main_task",
+			"headers",
+			"inc",
 			"ETH_DMABMR_SR",
 			"ETH_NVIC_Config",
 			"ETH_NVIC_Config()",
@@ -366,115 +517,12 @@
 			"PORTB_PHY_RESET",
 			"();\n",
 			"GPIOC",
-			"vTaskStartScheduler",
-			"stm32/",
-			"PTHREADS_USED",
-			"poll",
-			"pool.h",
-			"qeo",
-			"ETH_Delay",
-			"_eth_delay_",
-			"vectors",
-			"flash",
-			"isr_vector",
-			"SystemCoreClock",
-			"SysTi",
-			"SysTick_Handler",
-			"stm32f4xx_it.c",
-			"stm32f4xx_it.h",
-			"SysTick_Handler",
-			"SystemInit",
-			"_sbrk",
-			"USE_Delay",
-			"ETH_Delay",
-			"SYSCFG_ETH_MediaInterfaceConfig",
-			"ethernetif_init",
-			"inet_chksum_pbuf",
-			"sys_timeouts_mbox_fetch",
-			"LWIP_C_SOURCES_COMPLETE_API",
-			"timers",
-			"sys_timeouts_init",
-			"LWIP_TCP",
-			"tcp_init",
-			"tcp_in",
-			"sys_init",
-			"\\\n",
-			"lwip_htonl",
-			"vApplicationTickHook",
-			"myTraceCreate",
-			"SysTick_Handler",
-			"LED4",
-			"NVIC_PriorityGroup_4",
-			"EXTI_Line14",
-			"LCD",
-			");\n",
-			"Line4",
-			"stm32f4xx_conf.h",
-			"stm32f4xx_gpio.h",
-			"GPIO_InitTypeDef",
-			"RCC_AHB1Periph_ETH_MAC",
-			"eth_bsp",
-			" ",
-			"  ",
-			"	",
-			" ",
-			"  ",
-			"\\\n",
-			"RCC_AHB1Periph_ETH_MAC",
-			"stm32f4xx_rcc.h",
-			"RCC_AHB1Periph_ETH_MAC",
-			"stm32f4x7_eth_bsp.c",
-			"nsecplug/",
-			"BASE",
-			"LWIP_C_SOURCES_COMPLETE_API",
-			"STM32_ETH_LIB_SRC",
-			"RCC_AHB1Periph_ETH_MAC",
-			"file",
-			"ament",
-			"dynamic_reader",
-			"create_data",
-			"SubscriberHandle",
-			"CustomSubscriberInfo",
-			"publisher_qos",
-			"$(LWIP)",
-			"src",
-			"		$(LWIP)/",
-			"$(LWIP)",
-			"APP_SRC",
-			"FreeRTOSConfig.h",
-			")\n",
-			"stm32f10x_conf.h",
-			"stm32f4xx_conf.h",
-			"stm32f10x_conf.h",
-			"assert_param",
-			"__STM32F10x_CONF_H",
-			"__STM32F4XX_CONF_H",
-			"assert_param",
-			"__STM32F10x_CONF_H",
-			"10x",
-			"GPIO_Mode_AF_PP",
-			"RCC_APB2Periph_AFIO",
-			"GPIO_PortSourceGPIOA",
-			"GPIO_Mode_AF_PP",
-			"AFIO",
-			"RCC_APB2Periph_AFIO",
-			"GPIO_Mode_IN_FLOATING",
-			"GPIO_Mode_Out_PP",
-			"RCC_APB2Periph_GPIOA",
-			"RCC_APB2Periph_GPIOC",
-			"_",
-			"_gpio",
-			"stm32f10x",
-			"STM32_LIB",
-			"PLAT",
-			"CMSIS_LIB",
-			"stm32_p103.c",
-			"\n		"
+			"vTaskStartScheduler"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			" "
@@ -488,38 +536,182 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/echo-lwIP/console.c",
+					"file": "app/chat/main.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1121,
+						"buffer_size": 16439,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								229,
-								229
+								1662,
+								1662
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
 							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rtos/nuttx/apps/Kconfig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rtos/nuttx/apps/Make.defs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/networking/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1449,
+								1449
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "rtos/nuttx/apps/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 3102.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "rtos/nuttx/apps/examples/Make.defs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2273,
+								2273
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -529,34 +721,32 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
-					"file": "app/echo-lwIP/src/main.c",
+					"buffer": 6,
+					"file": "rtos/nuttx/nuttx/Makefile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13432,
+						"buffer_size": 2081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								699,
-								699
+								1336,
+								1336
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -590,7 +780,7 @@
 		"cols":
 		[
 			0.0,
-			0.534256217738,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -608,6 +798,10 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 142.0
+	},
 	"project": "ros2_embedded.sublime-project",
 	"replace":
 	{
@@ -619,6 +813,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"dcps_reader.c",
+				"dds/src/dcps/dcps_reader.c"
+			],
+			[
+				"cdr.h",
+				"dds/src/include/cdr.h"
+			],
+			[
+				"/dcps_reader.c",
+				"dds/src/dcps/dcps_reader.c"
+			],
+			[
+				"dds.c",
+				"dds/src/dds/dds.c"
+			],
+			[
+				"dds_debug.h",
+				"dds/api/headers/dds/dds_debug.h"
+			],
+			[
+				"startup_stm32f4xx.s",
+				"rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Source/Templates/TrueSTUDIO/startup_stm32f4xx.s"
+			],
 			[
 				"freertos/portable/gcc/arm_cm3/port.c",
 				"rtos/FreeRTOS/portable/GCC/ARM_CM3/port.c"
