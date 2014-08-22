@@ -19,6 +19,7 @@
 
 void thread_init (void);
 
+/* OS */
 #ifdef _WIN32
 
 #include "win.h"
@@ -141,7 +142,7 @@ void trc_lock_info (void);
 
 #define	THREADS_USED
 
-#elif defined (NO_LOCKS)
+#elif defined (NO_LOCKS) /* OS: No Windows and no locks */
 
 #define	lock_t			int
 #define LOCK_STATIC_INIT	0
@@ -158,7 +159,9 @@ void trc_lock_info (void);
 
 #define	cond_t			int
 
-#else
+#elif defined (FREE_RTOS) /* OS: FreeRTOS */
+
+#define	thread_t		int
 
 #define	lock_t			int
 
@@ -180,7 +183,32 @@ void trc_lock_info (void);
 #define cond_signal(c)		c = 1
 #define cond_signal_all(c)	c = 1
 #define cond_destroy(c)		c = -1
-#endif
+
+#else /* OS */
+
+#define	lock_t			int
+
+#define	lock_init_r(l,s)	l = 0
+#define	lock_init_nr(l,s)	l = 0
+#define	lock_try(l)		(!l) ? l=1, 1 : 0
+#define	lock_take(l)		(l) ? do { DDS_wait(1000); } while (l), l = 1 : l = 1
+#define	lock_release(l)		l = 0
+#define	lock_takef		lock_take
+#define	lock_releasef		lock_release
+#define lock_destroy(l)		l = -1
+#define lock_required(l)
+
+#define cond_t			int
+
+#define cond_init(c)		c = 0
+#define cond_wait(c,m)		while (!c) DDS_wait(1000); m = 1
+#define cond_wait_to(c,m,at)	if (!c) DDS_wait(at); m = 1
+#define cond_signal(c)		c = 1
+#define cond_signal_all(c)	c = 1
+#define cond_destroy(c)		c = -1
+
+#endif 
+/* OS */
 
 void rcl_access (void *p);
 

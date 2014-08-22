@@ -17,7 +17,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <unistd.h>
-//#include <poll.h>
+#include <poll.h>
+ /*
+	The poll() function provides applications with a mechanism for 
+ 	multiplexing input/output over a set of file descriptors
+ */
 #include "thread.h"
 #include "libx.h"
 #include "tty.h"

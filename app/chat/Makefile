@@ -13,7 +13,8 @@ ALT_STR =
 
 EXECUTABLE = chat${ALT_NUM}
 
-BASE_DDS       = ../../dds/src
+## ToDo modify this route for a relative one
+BASE_DDS       = /home/victor/Dropbox/OSRF/ros2_embedded/dds/src
 
 RTPS       = ${BASE_DDS}/rtps
 TRANS      = ${BASE_DDS}/trans
@@ -29,8 +30,9 @@ SQL        = ${BASE_DDS}/sql
 SECURITY   = ${BASE_DDS}/security
 NSEC	   = ${BASE_DDS}/nsec
 
-SECP       = ../../dds/plugins/secplug
-NSECP      = ../../dds/plugins/nsecplug/
+## ToDo modify this route for a relative one
+SECP       = /home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/secplug
+NSECP      = /home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/
 
 dds_CSRCS  = ${DDS}/dds.c ${DDS}/domain.c ${DDS}/locator.c ${DDS}/guid.c \
              ${DDS}/dds_seq.c ${DDS}/uqos.c ${DDS}/guard.c
@@ -89,13 +91,17 @@ splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \
 
 sql_CSRCS  = ${SQL}/scan.c ${SQL}/parse.c ${SQL}/bytecode.c
 
-#dynip_CSRCS= ${DYNIP}/di_main.c ${DYNIP}/di_linux.c
+dynip_CSRCS= ${DYNIP}/di_main.c ${DYNIP}/di_linux.c
 
 dbg_CSRCS  = ${DBG}/debug.c
 
-prog_CSRCS = main.c chat_msg.c ${dds_CSRCS} ${type_CSRCS} ${dcps_CSRCS} ${disc_CSRCS} \
-             ${cache_CSRCS} ${dbg_CSRCS} ${sql_CSRCS} ${dynip_CSRCS} ${co_CSRCS} \
-	     ${sec_CSRCS} ${splug_CSRCS}
+SUBLIME_CHAT_ROUTE = /home/victor/Dropbox/OSRF/ros2_embedded/app/chat/
+
+#  ${dynip_CSRCS}
+## ToDo modify this route for a relative one 
+prog_CSRCS = ${SUBLIME_CHAT_ROUTE}main.c ${SUBLIME_CHAT_ROUTE}chat_msg.c ${splug_CSRCS} ${dds_CSRCS} ${type_CSRCS} ${dcps_CSRCS} ${disc_CSRCS} \
+             ${cache_CSRCS} ${dbg_CSRCS} ${sql_CSRCS}  ${co_CSRCS} ${sec_CSRCS} \
+	     
 
 #comment the following && don't define RTPS_USED to drop RTPS/Discovery
 prog_CSRCS += ${rtps_CSRCS} ${trans_CSRCS}
@@ -112,7 +118,8 @@ ${EXECUTABLE}:	${prog_OBJS}
 # Setup Compile Environment
 
 # Cross compiler
-CROSS_COMPILE		=arm-none-eabi-
+CROSS_COMPILE		=
+#CROSS_COMPILE		=arm-none-eabi-
 CC       = $(CROSS_COMPILE)gcc
 
 INC_PATH = -I${BASE_DDS}/include -I../../dds/api/headers/ -I/usr/include/libxml2 -I../../dds/plugins/security/ -I${NSECP}/ -I../../dds/qeo-c-import/openssl/outputNative/openssl/HOSTLINUX/Debug/src/openssl-1.0.1f/include/
@@ -120,9 +127,11 @@ INC_PATH = -I${BASE_DDS}/include -I../../dds/api/headers/ -I/usr/include/libxml2
 LIB_PATH = -L../../dds/qeo-c-import/openssl/output/install/usr/local/lib
 LIBS     = 
 
-DEFINES  = -DPTHREADS_USED -DFORCE_MALLOC -DTTY_NORMAL -DRTPS_USED -DCDD_USED -DDDS_DEBUG \
-	   -DEXTRA_STATS -DLOG_FILE -DXTYPES_USED -DDDS_IPV6 -DDDS_TYPECODE -DDDS_TCP \
-	   -DBIGDATA -DDDS_FORWARD  -DDDS_SECURITY -DDDS_NATIVE_SECURITY -DMSECPLUG_WITH_SECXML
+# -DLOG_FILE -DDDS_IPV6 -DDDS_TCP -DEXTRA_STATS -DMSECPLUG_WITH_SECXML -DDDS_TYPECODE
+# -DDDS_DEBUG -DPTHREADS_USED
+DEFINES  = -DFORCE_MALLOC -DTTY_NORMAL -DRTPS_USED -DCDD_USED   \
+	       -DDDS_SECURITY -DFREE_RTOS\
+	   -DBIGDATA -DDDS_FORWARD  -DDDS_NATIVE_SECURITY -DXTYPES_USED 
 
 #-DDDS_BUILTINS -
 #-DDDS_AUTO_LIVELINESS
@@ -153,6 +162,7 @@ DEFINES  = -DPTHREADS_USED -DFORCE_MALLOC -DTTY_NORMAL -DRTPS_USED -DCDD_USED -D
 OPTTYPE  = -O0
 # -fprofile-arcs -ftest-coverage
 
+# -std=c99 # seems like C99 might be too much for the actual code to compile even in Linux
 CFLAGS   = -Wall -Wextra -pedantic -Wno-long-long ${OPTTYPE} ${INC_PATH} ${DEFINES} ${ALT_STR} -g
 LDFLAGS  = ${LIB_PATH} ${LIBS} -lnsl -lrt -lpthread -lssl -lcrypto -lxml2 -g
 # -lgcov
