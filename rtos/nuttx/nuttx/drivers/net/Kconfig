@@ -1,0 +1,247 @@
+#
+# For a description of the syntax of this configuration file,
+# see misc/tools/kconfig-language.txt.
+#
+
+comment "General Ethernet MAC Driver Options"
+
+config NETDEV_MULTINIC
+	bool "Multiple NIC support"
+	default n
+	---help---
+		Select this option if you board and/or MCU are capable of supporting
+		multiple Ethernet MAC drivers.
+
+config NET_DUMPPACKET
+	bool "Enable packet dumping"
+	depends on DEBUG
+	default n
+	---help---
+		Some Ethernet MAC drivers supporting dumping of received and
+		transmitted packets as a debug option.  This setting enables that
+		debug option. Also needs DEBUG.
+
+comment "External Ethernet MAC Device Support"
+
+config NET_DM90x0
+	bool "Davicom dm9000/dm9010 support"
+	default n
+	---help---
+		References: Davicom data sheets (DM9000-DS-F03-041906.pdf,
+		DM9010-DS-F01-103006.pdf) and looking at lots of other DM90x0
+		drivers.
+
+config NET_CS89x0
+	bool "CS89x0 support"
+	default n
+	depends on EXPERIMENTAL
+	---help---
+	Under construction -- do not use
+
+config ENC28J60
+	bool "Microchip ENC28J60 support"
+	default n
+	select SPI
+	---help---
+		References:
+		ENC28J60 Data Sheet, Stand-Alone Ethernet Controller with SPI Interface,
+		DS39662C, 2008 Microchip Technology Inc.
+
+if ENC28J60
+config ENC28J60_NINTERFACES
+	int "Number of physical ENC28J60"
+	default 1
+	range 1,1
+	---help---
+		Specifies the number of physical ENC28J60
+		devices that will be supported.
+
+config ENC28J60_SPIMODE
+	int "SPI mode"
+	default 0
+	---help---
+		Controls the SPI mode.  The ENC28J60 spec says that it supports SPI
+		mode 0,0 only: "The implementation used on this device supports SPI
+		mode 0,0 only. In addition, the SPI port requires that SCK be at Idle
+		in a low state; selectable clock polarity is not supported."
+		However, sometimes you need to tinker with these things.
+
+config ENC28J60_FREQUENCY
+	int "SPI frequency"
+	default 20000000
+	---help---
+		Define to use a different bus frequency
+
+config ENC28J60_STATS
+	bool "Network statistics support"
+	default n
+	---help---
+		Collect network statistics
+
+config ENC28J60_HALFDUPPLEX
+	bool "Enable half dupplex"
+	default n
+	---help---
+		Default is full duplex
+
+config ENC28J60_DUMPPACKET
+	bool "Dump Packets"
+	default n
+	---help---
+		If selected, the ENC28J60 driver  will dump the contents of each
+		packet to the console.
+
+config ENC28J60_REGDEBUG
+	bool "Register-Level Debug"
+	default n
+	depends on DEBUG && DEBUG_NET
+	---help---
+		Enable very low-level register access debug.  Depends on DEBUG and DEBUG_NET.
+
+endif
+
+config ENCX24J600
+	bool "Microchip ENCX24J600 support"
+	default n
+	select SPI
+	select NET_RXAVAIL
+	---help---
+		References:
+		ENC424J600/624J600 Data Sheet Stand-Alone 10/100 Ethernet Controller
+		with SPI or Parallel Interface DS39935B, 2009 Microchip Technology Inc.
+
+if ENCX24J600
+config ENC28J60_NINTERFACES
+	int "Number of physical ENCX24J600"
+	default 1
+	range 1,1
+	---help---
+		Specifies the number of physical ENCX24J600
+		devices that will be supported.
+
+config ENCX24J600_SPIMODE
+	int "SPI mode"
+	default 0
+	---help---
+		Controls the SPI mode.  The ENCX24J600 spec says that it supports SPI
+		mode 0,0 only: "The implementation used on this device supports SPI
+		mode 0,0 only. In addition, the SPI port requires that SCK be at Idle
+		in a low state; selectable clock polarity is not supported."
+		However, sometimes you need to tinker with these things.
+
+config ENCX24J600_FREQUENCY
+	int "SPI frequency"
+	default 14000000
+	---help---
+		Define to use a different bus frequency
+
+config ENCX24J600_NRXDESCR
+	int "Descriptor Count"
+	default 8
+	---help---
+		Defines how many descriptors are preallocated for the
+		transmission and reception queues.
+		The ENC has a relative large packet buffer of 24kB which can
+		be used to buffer multiple packets silmutaneously
+
+config ENCX24J600_STATS
+	bool "Network statistics support"
+	default n
+	---help---
+		Collect network statistics
+
+config ENCX24J600_DUMPPACKET
+	bool "Dump Packets"
+	default n
+	---help---
+		If selected, the ENCX24J600 driver  will dump the contents of each
+		packet to the console.
+
+config ENCX24J600_REGDEBUG
+	bool "Register-Level Debug"
+	default n
+	depends on DEBUG && DEBUG_NET
+	---help---
+		Enable very low-level register access debug.  Depends on DEBUG and DEBUG_NET.
+
+endif
+
+config NET_E1000
+	bool "E1000 support"
+	default n
+
+config NET_SLIP
+	bool "SLIP (serial line) support"
+	default n
+	---help---
+		Reference: RFC 1055
+
+config NET_VNET
+	bool "VNET support"
+	default n
+
+if ARCH_HAVE_PHY
+
+comment "External Ethernet PHY Device Support"
+
+choice
+	prompt "Board PHY Selection (ETH0)"
+	default ETH0_PHY_NONE
+	---help---
+		Identify the PHY on your board.  This setting is not used by all Ethernet
+		drivers nor do all Ethernet drivers support all PHYs.
+
+config ETH0_PHY_NONE
+	bool "No PHY support"
+
+config ETH0_PHY_KS8721
+	bool "Micrel KS8721 PHY"
+
+config ETH0_PHY_KSZ8051
+	bool "Micrel KSZ8051 PHY"
+
+config ETH0_PHY_KSZ90x1
+	bool "Micrel KSZ9021/31 PHY"
+
+config ETH0_PHY_DP83848C
+	bool "National Semiconduction DP83848C PHY"
+
+config ETH0_PHY_LAN8720
+	bool "SMSC LAN8720 PHY"
+
+config ETH0_PHY_DM9161
+	bool "Davicom DM9161 PHY"
+
+endchoice
+
+choice
+	prompt "Board PHY Selection (ETH1)"
+	default ETH1_PHY_NONE
+	depends on NETDEV_MULTINIC
+	---help---
+		Identify the PHY on your board.  This setting is not used by all Ethernet
+		drivers nor do all Ethernet drivers support all PHYs.
+
+config ETH1_PHY_NONE
+	bool "No PHY support"
+
+config ETH1_PHY_KS8721
+	bool "Micrel KS8721 PHY"
+
+config ETH1_PHY_KSZ8051
+	bool "Micrel KSZ8051 PHY"
+
+config ETH1_PHY_KSZ90x1
+	bool "Micrel KSZ9021/31 PHY"
+
+config ETH1_PHY_DP83848C
+	bool "National Semiconduction DP83848C PHY"
+
+config ETH1_PHY_LAN8720
+	bool "SMSC LAN8720 PHY"
+
+config ETH1_PHY_DM9161
+	bool "Davicom DM9161 PHY"
+
+endchoice
+endif # ARCH_HAVE_PHY
