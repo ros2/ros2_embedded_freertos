@@ -36,58 +36,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/chat/main.c",
+			"file": "app/chat/Makefile",
 			"settings":
 			{
-				"buffer_size": 16439,
+				"buffer_size": 6154,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "rtos/nuttx/apps/Kconfig",
+			"file": "app/chat/chat_msg.h",
 			"settings":
 			{
-				"buffer_size": 775,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rtos/nuttx/apps/Make.defs",
-			"settings":
-			{
-				"buffer_size": 2274,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/networking/Makefile",
-			"settings":
-			{
-				"buffer_size": 2872,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rtos/nuttx/apps/Makefile",
-			"settings":
-			{
-				"buffer_size": 7032,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rtos/nuttx/apps/examples/Make.defs",
-			"settings":
-			{
-				"buffer_size": 6826,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rtos/nuttx/nuttx/Makefile",
-			"settings":
-			{
-				"buffer_size": 2081,
+				"buffer_size": 2278,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,13 +200,19 @@
 	},
 	"file_history":
 	[
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/examples/Make.defs",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/Makefile",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/main.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/Kconfig",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/Make.defs",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/networking/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/System.map",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/win.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/xcdr.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/networking/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/Makefile.unix",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/main.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/sock.h",
@@ -294,7 +260,6 @@
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/cmdline.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/enet.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/trans/ip/ri_tcp.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/main.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/chat_msg.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dcps/dcps_writer.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/xtypes/xtopic.c",
@@ -362,12 +327,7 @@
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/list.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/timers.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stm32f4x7_eth_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/udpecho.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/src/api/tcpip.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/FreeRTOSConfig.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/portable/GCC/ARM_CM3/port.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/inc/lwipopts.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stubs.c"
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/udpecho.c"
 	],
 	"find":
 	{
@@ -536,205 +496,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/chat/main.c",
+					"file": "app/chat/Makefile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16439,
+						"buffer_size": 6154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1662,
-								1662
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "rtos/nuttx/apps/Kconfig",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 775,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "rtos/nuttx/apps/Make.defs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/networking/Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1449,
-								1449
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "rtos/nuttx/apps/Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7032,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 3102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "rtos/nuttx/apps/examples/Make.defs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6826,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2273,
-								2273
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"file": "rtos/nuttx/nuttx/Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2081,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1336,
-								1336
+								266,
+								266
 							]
 						],
 						"settings":
@@ -748,7 +527,41 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/chat/chat_msg.h",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],

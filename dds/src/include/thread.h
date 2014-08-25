@@ -17,6 +17,9 @@
 #ifndef __thread_h_
 #define	__thread_h_
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 void thread_init (void);
 
 /* OS */
@@ -161,7 +164,9 @@ void trc_lock_info (void);
 
 #elif defined (FREE_RTOS) /* OS: FreeRTOS */
 
-#define	thread_t		int
+#define thread_create(f,args)	xTaskCreate(f, (signed portCHAR *) "pseudo-thread", 512 /* stack size */, args, tskIDLE_PRIORITY + 5, NULL);
+
+#define LOCK_STATIC_INIT	CreateMutex (NULL, 0, /*s*/NULL)
 
 #define	lock_t			int
 

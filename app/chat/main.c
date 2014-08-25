@@ -17,11 +17,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <unistd.h>
-#include <poll.h>
- /*
-	The poll() function provides applications with a mechanism for 
- 	multiplexing input/output over a set of file descriptors
- */
+#ifdef FREE_RTOS
+#include "headers/poll.h"
+#else
+ #include <poll.h>
+#endif
 #include "thread.h"
 #include "libx.h"
 #include "tty.h"
@@ -52,7 +52,6 @@ char			chatroom [64] = "DDS";		/* Chatroom name. */
 char			user_name [64];			/* User name. */
 unsigned		domain_id;			/* Domain identifier. */
 int			verbose, aborting;
-thread_t		rt;
 #ifdef DDS_SECURITY
 char                    *engine_id;		/* Engine id. */
 char                    *cert_path;		/* Certificates path. */
@@ -395,14 +394,15 @@ static void *chat_reader (void *args)
 
 static void start_chat_reader (DDS_DynamicDataReader dr)
 {
-	thread_create (rt, chat_reader, dr);
+	xTaskCreate(chat_reader, (signed portCHAR *) "pseudo-thread", 512 , dr, tskIDLE_PRIORITY + 5, NULL);
+	//thread_create (chat_reader, dr);
 }
 
 static void stop_chat_reader (DDS_DynamicDataReader dr)
 {
 	ARG_NOT_USED (dr)
 
-	thread_wait (rt, NULL);
+	thread_wait (NULL);
 }
 
 #else

@@ -97,9 +97,9 @@ dbg_CSRCS  = ${DBG}/debug.c
 
 SUBLIME_CHAT_ROUTE = /home/victor/Dropbox/OSRF/ros2_embedded/app/chat/
 
-#  ${dynip_CSRCS}
+#  ${dynip_CSRCS} ${splug_CSRCS}
 ## ToDo modify this route for a relative one 
-prog_CSRCS = ${SUBLIME_CHAT_ROUTE}main.c ${SUBLIME_CHAT_ROUTE}chat_msg.c ${splug_CSRCS} ${dds_CSRCS} ${type_CSRCS} ${dcps_CSRCS} ${disc_CSRCS} \
+prog_CSRCS = ${SUBLIME_CHAT_ROUTE}main.c ${SUBLIME_CHAT_ROUTE}chat_msg.c ${dds_CSRCS} ${type_CSRCS} ${dcps_CSRCS} ${disc_CSRCS} \
              ${cache_CSRCS} ${dbg_CSRCS} ${sql_CSRCS}  ${co_CSRCS} ${sec_CSRCS} \
 	     
 
@@ -118,20 +118,41 @@ ${EXECUTABLE}:	${prog_OBJS}
 # Setup Compile Environment
 
 # Cross compiler
-CROSS_COMPILE		=
-#CROSS_COMPILE		=arm-none-eabi-
+#CROSS_COMPILE		=
+CROSS_COMPILE		=arm-none-eabi-
 CC       = $(CROSS_COMPILE)gcc
 
-INC_PATH = -I${BASE_DDS}/include -I../../dds/api/headers/ -I/usr/include/libxml2 -I../../dds/plugins/security/ -I${NSECP}/ -I../../dds/qeo-c-import/openssl/outputNative/openssl/HOSTLINUX/Debug/src/openssl-1.0.1f/include/
+
+#/////
+QEMU_STM32 ?= ../../../RTOS/qemu_stm32/arm-softmmu/qemu-system-arm
+ARCH=CM3
+VENDOR=ST
+PLAT=STM32F4x7
+CMSIS_LIB=../../rtos/CMSIS/STM32F4x7
+STM32_LIB=../../rtos/STM32F4xx_StdPeriph_Driver
+CMSIS_PLAT_SRC = $(CMSIS_LIB)/Device/ST/STM32F4xx/Source/Templates
+FREERTOS_SRC = ../../rtos/FreeRTOS
+FREERTOS_INC = $(FREERTOS_SRC)/include/                                       
+FREERTOS_PORT_INC = $(FREERTOS_SRC)/portable/GCC/ARM_$(ARCH)/
+#/////
+
+INC_PATH = -I. -I${BASE_DDS}/include -I../../dds/api/headers/ \
+		-I/usr/include/libxml2 -I../../dds/plugins/security/ \
+		-I${NSECP}/ -I../../dds/qeo-c-import/openssl/outputNative/openssl/HOSTLINUX/Debug/src/openssl-1.0.1f/include/ \
+		-I$(FREERTOS_INC) -I$(FREERTOS_PORT_INC)  \
+		-I$(CMSIS_LIB)/Include \
+		-I$(CMSIS_LIB)/Device/ST/STM32F4xx/Include \
+		-I../../rtos/STM32F4xx_StdPeriph_Driver/inc \
+
 #LIB_PATH =
 LIB_PATH = -L../../dds/qeo-c-import/openssl/output/install/usr/local/lib
 LIBS     = 
 
 # -DLOG_FILE -DDDS_IPV6 -DDDS_TCP -DEXTRA_STATS -DMSECPLUG_WITH_SECXML -DDDS_TYPECODE
-# -DDDS_DEBUG -DPTHREADS_USED
+# -DDDS_DEBUG -DPTHREADS_USED -DDDS_NATIVE_SECURITY -DDDS_SECURITY
 DEFINES  = -DFORCE_MALLOC -DTTY_NORMAL -DRTPS_USED -DCDD_USED   \
-	       -DDDS_SECURITY -DFREE_RTOS\
-	   -DBIGDATA -DDDS_FORWARD  -DDDS_NATIVE_SECURITY -DXTYPES_USED 
+	        -DFREE_RTOS\
+	   -DBIGDATA -DDDS_FORWARD   -DXTYPES_USED 
 
 #-DDDS_BUILTINS -
 #-DDDS_AUTO_LIVELINESS

@@ -22,6 +22,9 @@
 #include <string.h>
 #ifdef _WIN32
 #include "win.h"
+#elif defined (FREE_RTOS)
+#include <unistd.h>
+#include <headers/poll.h>
 #else
 #include <unistd.h>
 #include <poll.h>
