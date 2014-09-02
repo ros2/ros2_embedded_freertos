@@ -36,18 +36,125 @@
 	"buffers":
 	[
 		{
-			"file": "app/chat/Makefile",
+			"file": "app/networking/Makefile",
 			"settings":
 			{
-				"buffer_size": 6154,
+				"buffer_size": 2872,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/chat/chat_msg.h",
+			"file": "app/networking/src/main.c",
 			"settings":
 			{
-				"buffer_size": 2278,
+				"buffer_size": 2973,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/FreeRTOS/tasks.c",
+			"settings":
+			{
+				"buffer_size": 78220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/chat/Makefile",
+			"settings":
+			{
+				"buffer_size": 7463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dds/src/include/sys.h",
+			"settings":
+			{
+				"buffer_size": 13377,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/chat/headers/endian.h",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Unix",
+				"name": "#ifndef ENDIAN_H"
+			}
+		},
+		{
+			"file": "dds/src/dds/dds.c",
+			"settings":
+			{
+				"buffer_size": 54324,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/chat/main.c",
+			"settings":
+			{
+				"buffer_size": 16446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dds/src/include/win.h",
+			"settings":
+			{
+				"buffer_size": 1900,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dds/src/include/thread.h",
+			"settings":
+			{
+				"buffer_size": 7233,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dds/api/headers/dds/dds_security.h",
+			"settings":
+			{
+				"buffer_size": 6916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dds/plugins/nsecplug/sp_auth.h",
+			"settings":
+			{
+				"buffer_size": 2476,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 4878 files for \"sp_auth\" (regex)\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile:\n   83  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   84  #	     ../security/engine_fs.c\n   85: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   86  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   87  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/Makefile_component:\n  144  dds.libdds_SRCS             += $(addprefix src/nsec/,		sec_a_dtls.c sec_p_dtls.c)\n  145  endif\n  146: dds.libdds_SRCS             += $(addprefix plugins/nsecplug/,	sp_access.c sp_access_db.c sp_access_populate.c sp_auth.c sp_cert.c \\\n  147  								sp_sys_cert_none.c sp_cred.c sp_crypto.c sp_main.c sp_sys.c \\\n  148  								sp_sys_cert.c sp_sys_crypto.c)\n\nUnable to open ~/Dropbox/OSRF/ros2_embedded/dds/build\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/msecplug/msecplug.h:\n  437  /*********************************/\n  438  \n  439: typedef DDS_ReturnCode_t (*msp_auth_revoke_listener_fct) (IdentityHandle_t id);\n  440  \n  441: DDS_ReturnCode_t msp_set_auth_listener (msp_auth_revoke_listener_fct fct);\n  442  \n  443  /* On revoke identity listener for DDS */\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/bw/Makefile:\n   65  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   66  #	     ../security/engine_fs.c\n   67: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   68  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   69  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/cdd/Makefile:\n   65  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   66  #	     ../security/engine_fs.c\n   67: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   68  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   69  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/chat/Makefile:\n   72  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   73  #	     ../security/engine_fs.c\n   74: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   75  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   76  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/dcps/Makefile:\n   70  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   71  #	     ../security/engine_fs.c\n   72: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   73  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   74  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/dump/Makefile:\n   65  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   66  #	     ../security/engine_fs.c\n   67: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   68  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   69  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/fwd/Makefile:\n   69  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   70  #	     ../security/engine_fs.c\n   71: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   72  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   73  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/latency/Makefile:\n   64  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   65  #	     ../security/engine_fs.c\n   66: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   67  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   68  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/apps/shapes/Makefile:\n   65  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   66  #	     ../security/engine_fs.c\n   67: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   68  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   69  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_access_db.h:\n   17  \n   18  #include \"dds/dds_security.h\"\n   19: #include \"sp_auth.h\"\n   20  #include \"sp_data.h\"\n   21  #include \"nsecplug/nsecplug.h\"\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_auth.c:\n   13   */\n   14  \n   15: /* sp_auth.c -- DDS Security Plugin - Authentication plugin implementations. */\n   16  \n   17  #include \"dds/dds_error.h\"\n   18  #include \"dds/dds_security.h\"\n   19: #include \"sp_auth.h\"\n   20  #include \"sp_access.h\"\n   21  #include \"sp_cred.h\"\n   ..\n   25  #include <stdlib.h>\n   26  \n   27: #define SP_AUTH_LOG\n   28  \n   29  /* This function shall check and store the local credentials */\n   ..\n   61  	*local_id = id;\n   62  	*validation = DDS_AA_HANDSHAKE;\n   63: #ifdef SP_AUTH_LOG\n   64: 		log_printf (SEC_ID, 0, \"SP_AUTH: Validate local id returned handshake request\\r\\n\");\n   65  #endif\n   66  	return (DDS_RETCODE_OK);\n   ..\n   73  	*local_id = 0;\n   74  	validation = DDS_AA_REJECTED;\n   75: #ifdef SP_AUTH_LOG\n   76: 		log_printf (SEC_ID, 0, \"SP_AUTH: Validate local id returned rejected\\r\\n\");\n   77  #endif\n   78  	return (DDS_RETCODE_NOT_ALLOWED_BY_SEC);\n   ..\n  118  \n  119  	*validation = DDS_AA_ACCEPTED;\n  120: #ifdef SP_AUTH_LOG\n  121: 		log_printf (SEC_ID, 0, \"SP_AUTH: verify remote credentials returned accepted\\r\\n\");\n  122  #endif\n  123  	return (DDS_RETCODE_OK);\n  ...\n  127  	sp_access_remove_unchecked_participant (remote_id);\n  128  	*validation = DDS_AA_REJECTED;\n  129: #ifdef SP_AUTH_LOG\n  130: 		log_printf (SEC_ID, 0, \"SP_AUTH: verify remote credentials returned rejected\\r\\n\");\n  131  #endif\n  132  	return (DDS_RETCODE_NOT_ALLOWED_BY_SEC);\n  133  }\n  134  \n  135: DDS_ReturnCode_t sp_auth_get_name (IdentityHandle_t id,\n  136  				   char             *name,\n  137  				   size_t           length,\n  ...\n  153  }\n  154  \n  155: DDS_ReturnCode_t sp_auth_get_id_credential (IdentityHandle_t id,\n  156  					    unsigned char    *cred,\n  157  					    size_t           length,\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_auth.h:\n   13   */\n   14  \n   15: /* sp_auth.h -- DDS Security Plugin - Authentication plugin definitions. */\n   16  \n   17: #ifndef __sp_auth_h_\n   18: #define __sp_auth_h_\n   19  \n   20  #include \"dds/dds_error.h\"\n   ..\n   51  /* Validate remote credentials. */\n   52  \n   53: DDS_ReturnCode_t sp_auth_get_name (IdentityHandle_t id, \n   54  				   char             *name,\n   55  				   size_t           length,\n   ..\n   59  \n   60  \n   61: DDS_ReturnCode_t sp_auth_get_id_credential (IdentityHandle_t id,\n   62  					    unsigned char    *cred,\n   63  					    size_t           length,\n   ..\n   66  /* Get the id credential */\n   67  \n   68: DDS_ReturnCode_t sp_auth_remote_accepted (IdentityHandle_t    id,\n   69  					  const unsigned char *identity,\n   70  					  size_t              length,\n   ..\n   78  /* Remove a stored identity. */\n   79  \n   80: #endif /* !__sp_auth_h_ */\n   81  \n   82  \n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_cert.h:\n   20  #include \"dds/dds_error.h\"\n   21  #include <stddef.h>\n   22: #include \"sp_auth.h\"\n   23  \n   24  typedef struct sp_sec_cert_st SP_SEC_CERT;\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_db.c:\n   63  \n   64  static sp_extra_authentication_check_fct extra_authentication_check = NULL;\n   65: static msp_auth_revoke_listener_fct on_revoke_identity = NULL;\n   66  static msp_acc_revoke_listener_fct on_revoke_permissions = NULL;\n   67  \n   ..\n   79  }\n   80  \n   81: DDS_ReturnCode_t msp_set_auth_listener (msp_auth_revoke_listener_fct f)\n   82  {\n   83  	if (!f)\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_main.c:\n   13   */\n   14  \n   15: #include \"sp_auth.h\"\n   16  /*#include \"sp_access.h\"*/\n   17  /*#include \"sp_aux.h\"*/\n   ..\n   47  }\n   48  \n   49: static DDS_ReturnCode_t sp_auth_req (DDS_AuthenticationRequest code,\n   50  				     DDS_SecurityReqData       *data)\n   51  {\n   ..\n   72  		break;\n   73  	case DDS_GET_ID_NAME:\n   74: 		rc = sp_auth_get_name (data->handle,\n   75  				       data->data,\n   76  				       data->length,\n   ..\n   78  		break;\n   79  	case DDS_GET_ID_CREDENTIAL:\n   80: 		rc = sp_auth_get_id_credential (data->handle, \n   81  						data->data, \n   82  						data->length,\n   ..\n  293  			return (DDS_RETCODE_BAD_PARAMETER);\n  294  		else\n  295: 			return (sp_auth_req ((DDS_AuthenticationRequest) code, data));\n  296  	}\n  297  	else if (c == DDS_SC_ACCESS) {\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/secplug/msecplug.c:\n   74  \n   75  static sp_extra_authentication_check_fct extra_authentication_check = NULL;\n   76: static msp_auth_revoke_listener_fct on_revoke_identity = NULL;\n   77  static msp_acc_revoke_listener_fct on_revoke_permissions = NULL;\n   78  \n   ..\n   90  }\n   91  \n   92: DDS_ReturnCode_t msp_set_auth_listener (msp_auth_revoke_listener_fct f)\n   93  {\n   94  	if (!f)\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/limits/Makefile:\n   66  #splug_CSRCS= ../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   67  #	     ../security/engine_fs.c\n   68: splug_CSRCS= ${NSECP}/sp_auth.c ${NSECP}/sp_crypto.c \\\n   69  	     ${NSECP}/sp_cert.c ${NSECP}/sp_cred.c \\\n   70  	     ${NSECP}/sp_sys_cert.c ${NSECP}/sp_sys_crypto.c ${NSECP}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/access/Makefile:\n   62  	     ${CO}/config.c ${CO}/cmdline.c\n   63  #splug_CSRCS= ../secplug/msecplug.c ../secplug/xmlparse.c ../security/engine_fs.c\n   64: #splug_CSRCS= ../nsecplug/sp_auth.c ../nsecplug/sp_access.c \\\n   65  	     ../nsecplug/sp_crypto.c ../nsecplug/sp_aux.c ../nsecplug/sp_sys.c \\\n   66  	     ../nsecplug/sp_main.c ../secplug/xmlparse.c ../security/engine_fs.c\n   ..\n   68  #../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   69  #	     ../security/engine_fs.c\n   70: splug_CSRCS= ${SECPLUG}/sp_auth.c ${SECPLUG}/sp_crypto.c \\\n   71  	     ${SECPLUG}/sp_cert.c ${SECPLUG}/sp_cred.c \\\n   72  	     ${SECPLUG}/sp_sys_cert.c ${SECPLUG}/sp_sys_crypto.c ${SECPLUG}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/auth/Makefile:\n   58  	     ${CO}/config.c ${CO}/cmdline.c\n   59  #splug_CSRCS= ../secplug/msecplug.c ../secplug/xmlparse.c ../security/engine_fs.c\n   60: #splug_CSRCS= ../nsecplug/sp_auth.c ../nsecplug/sp_access.c \\\n   61  	     ../nsecplug/sp_crypto.c ../nsecplug/sp_aux.c ../nsecplug/sp_sys.c \\\n   62  	     ../nsecplug/sp_main.c ../secplug/xmlparse.c ../security/engine_fs.c\n   ..\n   64  #../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   65  #	     ../security/engine_fs.c\n   66: splug_CSRCS= ${SECPLUG}/sp_auth.c ${SECPLUG}/sp_crypto.c \\\n   67  	     ${SECPLUG}/sp_cert.c ${SECPLUG}/sp_cred.c \\\n   68  	     ${SECPLUG}/sp_sys_cert.c ${SECPLUG}/sp_sys_crypto.c ${SECPLUG}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/auth/auth_test.c:\n   21  #include \"sp_sys_crypto.h\"\n   22  #include \"openssl/pem.h\"\n   23: #include \"sp_auth.h\"\n   24  #include <string.h>\n   25  \n   ..\n  103  		exit (ret);\n  104  \n  105: 	if ((ret = sp_auth_get_name (local_id, &name [0], 32, &len)))\n  106  		exit (ret);\n  107  \n  ...\n  109  		exit (1);\n  110  \n  111: 	if ((ret = sp_auth_get_id_credential (local_id, &cred [0], 5096, &len)))\n  112  		exit (ret);\n  113  \n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/auth/auth_test.c~:\n    7  #include \"sp_sys_crypto.h\"\n    8  #include \"openssl/pem.h\"\n    9: #include \"sp_auth.h\"\n   10  #include <string.h>\n   11  \n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/cred/Makefile:\n   58  	     ${CO}/config.c ${CO}/cmdline.c\n   59  #splug_CSRCS= ../secplug/msecplug.c ../secplug/xmlparse.c ../security/engine_fs.c\n   60: #splug_CSRCS= ../nsecplug/sp_auth.c ../nsecplug/sp_access.c \\\n   61  	     ../nsecplug/sp_crypto.c ../nsecplug/sp_aux.c ../nsecplug/sp_sys.c \\\n   62  	     ../nsecplug/sp_main.c ../secplug/xmlparse.c ../security/engine_fs.c\n   ..\n   64  #../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   65  #	     ../security/engine_fs.c\n   66: splug_CSRCS= ${SECPLUG}/sp_auth.c ${SECPLUG}/sp_crypto.c \\\n   67  	     ${SECPLUG}/sp_cert.c ${SECPLUG}/sp_cred.c \\\n   68  	     ${SECPLUG}/sp_sys_cert.c ${SECPLUG}/sp_sys_crypto.c ${SECPLUG}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/sys_cert/Makefile:\n   58  	     ${CO}/config.c ${CO}/cmdline.c\n   59  #splug_CSRCS= ../secplug/msecplug.c ../secplug/xmlparse.c ../security/engine_fs.c\n   60: #splug_CSRCS= ../nsecplug/sp_auth.c ../nsecplug/sp_access.c \\\n   61  	     ../nsecplug/sp_crypto.c ../nsecplug/sp_aux.c ../nsecplug/sp_sys.c \\\n   62  	     ../nsecplug/sp_main.c ../secplug/xmlparse.c ../security/engine_fs.c\n   ..\n   64  #../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   65  #	     ../security/engine_fs.c\n   66: splug_CSRCS= ${SECPLUG}/sp_auth.c ${SECPLUG}/sp_crypto.c \\\n   67  	     ${SECPLUG}/sp_cert.c ${SECPLUG}/sp_cred.c \\\n   68  	     ${SECPLUG}/sp_sys_crypto.c ${SECPLUG}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/sectest/sys_crypto/Makefile:\n   58  	     ${CO}/config.c ${CO}/cmdline.c\n   59  #splug_CSRCS= ../secplug/msecplug.c ../secplug/xmlparse.c ../security/engine_fs.c\n   60: #splug_CSRCS= ../nsecplug/sp_auth.c ../nsecplug/sp_access.c \\\n   61  	     ../nsecplug/sp_crypto.c ../nsecplug/sp_aux.c ../nsecplug/sp_sys.c \\\n   62  	     ../nsecplug/sp_main.c ../secplug/xmlparse.c ../security/engine_fs.c\n   ..\n   64  #../../test/splug/p_main.c ../../test/splug/p_xml.c \\\n   65  #	     ../security/engine_fs.c\n   66: splug_CSRCS= ${SECPLUG}/sp_auth.c ${SECPLUG}/sp_crypto.c \\\n   67  	     ${SECPLUG}/sp_cert.c ${SECPLUG}/sp_cred.c \\\n   68  	     ${SECPLUG}/sp_sys_cert.c ${SECPLUG}/sp_main.c \\\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/splug/p_main.c:\n   60  \n   61  static sp_extra_authentication_check_fct extra_authentication_check = NULL;\n   62: static msp_auth_revoke_listener_fct on_revoke_identity = NULL;\n   63  static msp_acc_revoke_listener_fct on_revoke_permissions = NULL;\n   64  \n   ..\n 1564  /* On revoke identity listener for DDS */\n 1565  \n 1566: DDS_ReturnCode_t sp_set_auth_listener (msp_auth_revoke_listener_fct fct)\n 1567  {\n 1568  	if (!fct)\n ....\n 2021  }\n 2022  \n 2023: static DDS_ReturnCode_t sp_auth_req (DDS_AuthenticationRequest code,\n 2024  				     DDS_SecurityReqData       *data)\n 2025  {\n ....\n 2863  			return (DDS_RETCODE_BAD_PARAMETER);\n 2864  		else\n 2865: 			return (sp_auth_req ((DDS_AuthenticationRequest) code, data));\n 2866  	}\n 2867  	else if (c == DDS_SC_ACCESS) {\n\n62 matches across 27 files\n\n\nSearching 4908 files for \"LOCK_STATIC_INIT\" (regex)\n\nUnable to open ~/Dropbox/OSRF/ros2_embedded/dds/build\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/co/config.c:\n  239  \n  240  static ParVal_t *parameters [N_CONFIG_PARS];\n  241: static lock_t	cfg_lock = LOCK_STATIC_INIT;\n  242  static int	cfg_ready;\n  243  \n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c:\n  151  \n  152  static lock_t global_lock;\n  153: static lock_t pre_init_lock = LOCK_STATIC_INIT;\n  154  \n  155  typedef struct pending_notify_st PendingNotify_t;\n\n/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h:\n   30  #define	lock_t			HANDLE\n   31  \n   32: #define LOCK_STATIC_INIT	CreateMutex (NULL, 0, /*s*/NULL)\n   33  #define	lock_init_r(l,s)	((l = CreateMutex (NULL, 0, /*s*/NULL)) == NULL)\n   34  #define	lock_init_nr(l,s)	((l = CreateMutex (NULL, 0, /*s*/NULL)) == NULL)\n   ..\n   88  \n   89  #define	lock_t			pthread_mutex_t\n   90: #define LOCK_STATIC_INIT	PTHREAD_MUTEX_INITIALIZER\n   91  \n   92  extern pthread_mutexattr_t	recursive_mutex;\n   ..\n  149  \n  150  #define	lock_t			int\n  151: #define LOCK_STATIC_INIT	0\n  152  \n  153  #define	lock_init_r(l,s)\n\n5 matches across 3 files\n\n\nSearching 4908 files for \"xSemaphore\" (regex)\n\n~/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/main.elf:\n    <binary>\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/main.list:\n 7933  #if ( configUSE_MUTEXES == 1 )\n 7934  \n 7935: 	void* xQueueGetMutexHolder( xQueueHandle xSemaphore )\n 7936  	{\n 7937   8003088:	b580      	push	{r7, lr}\n ....\n 7939   800308c:	af00      	add	r7, sp, #0\n 7940   800308e:	6078      	str	r0, [r7, #4]\n 7941: 		/* This function is called by xSemaphoreGetMutexHolder(), and should not\n 7942  		be called directly.  Note:  This is is a good way of determining if the\n 7943  		calling task is the mutex holder, but not a good way of determining the\n ....\n 7947   8003090:	f001 fc96 	bl	80049c0 <vPortEnterCritical>\n 7948  		{\n 7949: 			if( xSemaphore->uxQueueType == queueQUEUE_IS_MUTEX )\n 7950   8003094:	687b      	ldr	r3, [r7, #4]\n 7951   8003096:	681b      	ldr	r3, [r3, #0]\n ....\n 7953   800309a:	d103      	bne.n	80030a4 <xQueueGetMutexHolder+0x1c>\n 7954  			{\n 7955: 				pxReturn = ( void * ) xSemaphore->pxMutexHolder;\n 7956   800309c:	687b      	ldr	r3, [r7, #4]\n 7957   800309e:	685b      	ldr	r3, [r3, #4]\n ....\n 38938   800da24:	d107      	bne.n	800da36 <sys_sem_new+0x56>\n 38939  	{\n 38940: 		xSemaphoreTake(*sem,1);\n 38941   800da26:	687b      	ldr	r3, [r7, #4]\n 38942   800da28:	681b      	ldr	r3, [r3, #0]\n .....\n 38984   800da58:	d022      	beq.n	800daa0 <sys_arch_sem_wait+0x5c>\n 38985  	{\n 38986: 		if( xSemaphoreTake( *sem, timeout / portTICK_RATE_MS ) == pdTRUE )\n 38987   800da5a:	687b      	ldr	r3, [r7, #4]\n 38988   800da5c:	681a      	ldr	r2, [r3, #0]\n .....\n 39027  	else // must block without a timeout\n 39028  	{\n 39029: 		while( xSemaphoreTake(*sem, portMAX_DELAY) != pdTRUE){}\n 39030   800daa0:	bf00      	nop\n 39031   800daa2:	687b      	ldr	r3, [r7, #4]\n .....\n 39073   800dae0:	af00      	add	r7, sp, #0\n 39074   800dae2:	6078      	str	r0, [r7, #4]\n 39075: 	xSemaphoreGive(*sem);\n 39076   800dae4:	687b      	ldr	r3, [r7, #4]\n 39077   800dae6:	681b      	ldr	r3, [r3, #0]\n .....\n 40586  \n 40587    /* create binary semaphore used for informing ethernetif of frame reception */\n 40588:   if (s_xSemaphore == NULL)\n 40589   800e324:	f248 7390 	movw	r3, #34704	; 0x8790\n 40590   800e328:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 40593   800e330:	d127      	bne.n	800e382 <low_level_init+0xba>\n 40594    {\n 40595:     vSemaphoreCreateBinary(s_xSemaphore);\n 40596   800e332:	2001      	movs	r0, #1\n 40597   800e334:	2100      	movs	r1, #0\n .....\n 40615   800e366:	2300      	movs	r3, #0\n 40616   800e368:	f7f4 fea6 	bl	80030b8 <xQueueGenericSend>\n 40617:     xSemaphoreTake( s_xSemaphore, 0);\n 40618   800e36c:	f248 7390 	movw	r3, #34704	; 0x8790\n 40619   800e370:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 40753   800e446:	6078      	str	r0, [r7, #4]\n 40754   800e448:	6039      	str	r1, [r7, #0]\n 40755:   static xSemaphoreHandle xTxSemaphore = NULL;\n 40756    struct pbuf *q;\n 40757    u8 *buffer ;\n .....\n 40770   800e458:	60fb      	str	r3, [r7, #12]\n 40771  \n 40772:   if (xTxSemaphore == NULL)\n 40773   800e45a:	f248 7394 	movw	r3, #34708	; 0x8794\n 40774   800e45e:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 40777   800e466:	d11c      	bne.n	800e4a2 <low_level_output+0x62>\n 40778    {\n 40779:     vSemaphoreCreateBinary (xTxSemaphore);\n 40780   800e468:	2001      	movs	r0, #1\n 40781   800e46a:	2100      	movs	r1, #0\n .....\n 40801    }\n 40802  \n 40803:   if (xSemaphoreTake(xTxSemaphore, netifGUARD_BLOCK_TIME))\n 40804   800e4a2:	f248 7394 	movw	r3, #34708	; 0x8794\n 40805   800e4a6:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 40982    error:\n 40983  \n 40984:     xSemaphoreGive(xTxSemaphore);\n 40985   800e59e:	f248 7394 	movw	r3, #34708	; 0x8794\n 40986   800e5a2:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 41284    for( ;; )\n 41285    {\n 41286:     if (xSemaphoreTake( s_xSemaphore, emacBLOCK_TIME_WAITING_FOR_INPUT)==pdTRUE)\n 41287   800e734:	f248 7390 	movw	r3, #34704	; 0x8790\n 41288   800e738:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 41615   800e93e:	f000 fa35 	bl	800edac <Eth_Link_EXTIConfig>\n 41616    \n 41617:   if (ETH_link_xSemaphore == NULL)\n 41618   800e942:	f648 0390 	movw	r3, #34960	; 0x8890\n 41619   800e946:	f2c2 0301 	movt	r3, #8193	; 0x2001\n .....\n 41623    {\n 41624      /* create binary semaphore used for ETH_link handling */\n 41625:     vSemaphoreCreateBinary( ETH_link_xSemaphore );\n 41626   800e950:	2001      	movs	r0, #1\n 41627   800e952:	2100      	movs	r1, #0\n .....\n 42314    for(;;)\n 42315    {\n 42316:     if (xSemaphoreTake( ETH_link_xSemaphore, emacBLOCK_TIME_WAITING_ETH_LINK_IT)==pdTRUE)\n 42317   800ee34:	f648 0390 	movw	r3, #34960	; 0x8890\n 42318   800ee38:	f2c2 0301 	movt	r3, #8193	; 0x2001\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/stm32f4x7_eth_bsp.c:\n   55  extern __IO uint8_t DHCP_state;\n   56  #endif /* LWIP_DHCP */\n   57: xSemaphoreHandle ETH_link_xSemaphore = NULL;\n   58  \n   59  /* Private function prototypes -----------------------------------------------*/\n   ..\n   92    Eth_Link_EXTIConfig();\n   93    \n   94:   if (ETH_link_xSemaphore == NULL)\n   95    {\n   96      /* create binary semaphore used for ETH_link handling */\n   97:     vSemaphoreCreateBinary( ETH_link_xSemaphore );\n   98    }\n   99  \n  ...\n  379    for(;;)\n  380    {\n  381:     if (xSemaphoreTake( ETH_link_xSemaphore, emacBLOCK_TIME_WAITING_ETH_LINK_IT)==pdTRUE)\n  382      {\n  383        /* Check whether the link interrupt has occurred or not */\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/stm32f4xx_it.c:\n   45  /* Private macro -------------------------------------------------------------*/\n   46  /* Private variables ---------------------------------------------------------*/\n   47: extern xSemaphoreHandle s_xSemaphore;\n   48: extern xSemaphoreHandle ETH_link_xSemaphore;\n   49  /* Private function prototypes -----------------------------------------------*/\n   50  extern void xPortSysTickHandler(void); \n   ..\n  147    {\n  148    /* Give the semaphore to wakeup LwIP task */\n  149:   xSemaphoreGiveFromISR( ETH_link_xSemaphore, &xHigherPriorityTaskWoken ); \n  150    }\n  151     /* Clear interrupt pending bit */\n  ...\n  172    {\n  173      /* Give the semaphore to wakeup LwIP task */\n  174:     xSemaphoreGiveFromISR( s_xSemaphore, &xHigherPriorityTaskWoken );\n  175    }\n  176  \n\n~/Dropbox/OSRF/ros2_embedded/app/networking/main.elf:\n    <binary>\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/networking/main.list:\n 7718  #if ( configUSE_MUTEXES == 1 )\n 7719  \n 7720: 	void* xQueueGetMutexHolder( xQueueHandle xSemaphore )\n 7721  	{\n 7722   8002f48:	b580      	push	{r7, lr}\n ....\n 7724   8002f4c:	af00      	add	r7, sp, #0\n 7725   8002f4e:	6078      	str	r0, [r7, #4]\n 7726: 		/* This function is called by xSemaphoreGetMutexHolder(), and should not\n 7727  		be called directly.  Note:  This is is a good way of determining if the\n 7728  		calling task is the mutex holder, but not a good way of determining the\n ....\n 7732   8002f50:	f001 fc96 	bl	8004880 <vPortEnterCritical>\n 7733  		{\n 7734: 			if( xSemaphore->uxQueueType == queueQUEUE_IS_MUTEX )\n 7735   8002f54:	687b      	ldr	r3, [r7, #4]\n 7736   8002f56:	681b      	ldr	r3, [r3, #0]\n ....\n 7738   8002f5a:	d103      	bne.n	8002f64 <xQueueGetMutexHolder+0x1c>\n 7739  			{\n 7740: 				pxReturn = ( void * ) xSemaphore->pxMutexHolder;\n 7741   8002f5c:	687b      	ldr	r3, [r7, #4]\n 7742   8002f5e:	685b      	ldr	r3, [r3, #4]\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.c:\n   12  \n   13  volatile xQueueHandle serial_str_queue = NULL;\n   14: volatile xSemaphoreHandle serial_tx_wait_sem = NULL;\n   15  volatile xQueueHandle serial_rx_queue = NULL;\n   16  \n   ..\n   37  		 * that the buffer has a spot free for the next byte.\n   38  		 */\n   39: 		xSemaphoreGiveFromISR(serial_tx_wait_sem, &xHigherPriorityTaskWoken);\n   40  \n   41  		/* Diables the transmit interrupt. */\n   ..\n   72  	 * another byte.\n   73  	 */\n   74: 	while (!xSemaphoreTake(serial_tx_wait_sem, portMAX_DELAY));\n   75  \n   76  	/* Send the byte and enable the transmit interrupt (it is disabled by\n\n~/Dropbox/OSRF/ros2_embedded/app/peripherals/main.elf:\n    <binary>\n\n/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.list:\n 7611  #if ( configUSE_MUTEXES == 1 )\n 7612  \n 7613: 	void* xQueueGetMutexHolder( xQueueHandle xSemaphore )\n 7614  	{\n 7615      2c88:	b580      	push	{r7, lr}\n ....\n 7617      2c8c:	af00      	add	r7, sp, #0\n 7618      2c8e:	6078      	str	r0, [r7, #4]\n 7619: 		/* This function is called by xSemaphoreGetMutexHolder(), and should not\n 7620  		be called directly.  Note:  This is is a good way of determining if the\n 7621  		calling task is the mutex holder, but not a good way of determining the\n ....\n 7625      2c90:	f001 fc96 	bl	45c0 <vPortEnterCritical>\n 7626  		{\n 7627: 			if( xSemaphore->uxQueueType == queueQUEUE_IS_MUTEX )\n 7628      2c94:	687b      	ldr	r3, [r7, #4]\n 7629      2c96:	681b      	ldr	r3, [r3, #0]\n ....\n 7631      2c9a:	d103      	bne.n	2ca4 <xQueueGetMutexHolder+0x1c>\n 7632  			{\n 7633: 				pxReturn = ( void * ) xSemaphore->pxMutexHolder;\n 7634      2c9c:	687b      	ldr	r3, [r7, #4]\n 7635      2c9e:	685b      	ldr	r3, [r3, #4]\n ....\n 12884  		 * that the buffer has a spot free for the next byte.\n 12885  		 */\n 12886: 		xSemaphoreGiveFromISR(serial_tx_wait_sem, &xHigherPriorityTaskWoken);\n 12887      4940:	f244 53bc 	movw	r3, #17852	; 0x45bc\n 12888      4944:	f2c2 0300 	movt	r3, #8192	; 0x2000\n .....\n 12977  	 * another byte.\n 12978  	 */\n 12979: 	while (!xSemaphoreTake(serial_tx_wait_sem, portMAX_DELAY));\n 12980      49e2:	bf00      	nop\n 12981      49e4:	f244 53bc 	movw	r3, #17852	; 0x45bc\n\nUnable to open ~/Dropbox/OSRF/ros2_embedded/dds/build\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/queue.c:\n  178  unsigned char ucQueueGetQueueType( xQueueHandle pxQueue ) PRIVILEGED_FUNCTION;\n  179  portBASE_TYPE xQueueGenericReset( xQueueHandle pxQueue, portBASE_TYPE xNewQueue ) PRIVILEGED_FUNCTION;\n  180: xTaskHandle xQueueGetMutexHolder( xQueueHandle xSemaphore ) PRIVILEGED_FUNCTION;\n  181  \n  182  /*\n  ...\n  428  #if ( configUSE_MUTEXES == 1 )\n  429  \n  430: 	void* xQueueGetMutexHolder( xQueueHandle xSemaphore )\n  431  	{\n  432  	void *pxReturn;\n  433  \n  434: 		/* This function is called by xSemaphoreGetMutexHolder(), and should not\n  435  		be called directly.  Note:  This is is a good way of determining if the\n  436  		calling task is the mutex holder, but not a good way of determining the\n  ...\n  439  		taskENTER_CRITICAL();\n  440  		{\n  441: 			if( xSemaphore->uxQueueType == queueQUEUE_IS_MUTEX )\n  442  			{\n  443: 				pxReturn = ( void * ) xSemaphore->pxMutexHolder;\n  444  			}\n  445  			else\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/include/queue.h:\n 1235  \n 1236  /*\n 1237:  * For internal use only.  Use xSemaphoreCreateMutex(),\n 1238:  * xSemaphoreCreateCounting() or xSemaphoreGetMutexHolder() instead of calling\n 1239   * these functions directly.\n 1240   */\n 1241  xQueueHandle xQueueCreateMutex( unsigned char ucQueueType );\n 1242  xQueueHandle xQueueCreateCountingSemaphore( unsigned portBASE_TYPE uxCountValue, unsigned portBASE_TYPE uxInitialCount );\n 1243: void* xQueueGetMutexHolder( xQueueHandle xSemaphore );\n 1244  \n 1245  /*\n 1246:  * For internal use only.  Use xSemaphoreTakeMutexRecursive() or\n 1247:  * xSemaphoreGiveMutexRecursive() instead of calling these functions directly.\n 1248   */\n 1249  portBASE_TYPE xQueueTakeMutexRecursive( xQueueHandle pxMutex, portTickType xBlockTime );\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/include/semphr.h:\n   74  #include \"queue.h\"\n   75  \n   76: typedef xQueueHandle xSemaphoreHandle;\n   77  \n   78  #define semBINARY_SEMAPHORE_QUEUE_LENGTH	( ( unsigned char ) 1U )\n   ..\n   83  /**\n   84   * semphr. h\n   85:  * <pre>vSemaphoreCreateBinary( xSemaphoreHandle xSemaphore )</pre>\n   86   *\n   87   * <i>Macro</i> that implements a semaphore by using the existing queue mechanism.\n   ..\n   95   * another continuously 'takes' the semaphore.  For this reason this type of\n   96   * semaphore does not use a priority inheritance mechanism.  For an alternative\n   97:  * that does use priority inheritance see xSemaphoreCreateMutex().\n   98   *\n   99:  * @param xSemaphore Handle to the created semaphore.  Should be of type xSemaphoreHandle.\n  100   *\n  101   * Example usage:\n  102   <pre>\n  103:  xSemaphoreHandle xSemaphore;\n  104  \n  105   void vATask( void * pvParameters )\n  ...\n  107      // Semaphore cannot be used before a call to vSemaphoreCreateBinary ().\n  108      // This is a macro so pass the variable in directly.\n  109:     vSemaphoreCreateBinary( xSemaphore );\n  110  \n  111:     if( xSemaphore != NULL )\n  112      {\n  113          // The semaphore was created successfully.\n  ...\n  119   * \\ingroup Semaphores\n  120   */\n  121: #define vSemaphoreCreateBinary( xSemaphore )																									\\\n  122  	{																																			\\\n  123: 		( xSemaphore ) = xQueueGenericCreate( ( unsigned portBASE_TYPE ) 1, semSEMAPHORE_QUEUE_ITEM_LENGTH, queueQUEUE_TYPE_BINARY_SEMAPHORE );	\\\n  124: 		if( ( xSemaphore ) != NULL )																											\\\n  125  		{																																		\\\n  126: 			xSemaphoreGive( ( xSemaphore ) );																									\\\n  127  		}																																		\\\n  128  	}\n  ...\n  130  /**\n  131   * semphr. h\n  132:  * <pre>xSemaphoreTake(\n  133:  *                   xSemaphoreHandle xSemaphore,\n  134   *                   portTickType xBlockTime\n  135   *               )</pre>\n  136   *\n  137   * <i>Macro</i> to obtain a semaphore.  The semaphore must have previously been\n  138:  * created with a call to vSemaphoreCreateBinary(), xSemaphoreCreateMutex() or\n  139:  * xSemaphoreCreateCounting().\n  140   *\n  141:  * @param xSemaphore A handle to the semaphore being taken - obtained when\n  142   * the semaphore was created.\n  143   *\n  ...\n  153   * Example usage:\n  154   <pre>\n  155:  xSemaphoreHandle xSemaphore = NULL;\n  156  \n  157   // A task that creates a semaphore.\n  ...\n  159   {\n  160      // Create the semaphore to guard a shared resource.\n  161:     vSemaphoreCreateBinary( xSemaphore );\n  162   }\n  163  \n  ...\n  167      // ... Do other things.\n  168  \n  169:     if( xSemaphore != NULL )\n  170      {\n  171          // See if we can obtain the semaphore.  If the semaphore is not available\n  172          // wait 10 ticks to see if it becomes free.	\n  173:         if( xSemaphoreTake( xSemaphore, ( portTickType ) 10 ) == pdTRUE )\n  174          {\n  175              // We were able to obtain the semaphore and can now access the\n  ...\n  180              // We have finished accessing the shared resource.  Release the\n  181              // semaphore.\n  182:             xSemaphoreGive( xSemaphore );\n  183          }\n  184          else\n  ...\n  190   }\n  191   </pre>\n  192:  * \\defgroup xSemaphoreTake xSemaphoreTake\n  193   * \\ingroup Semaphores\n  194   */\n  195: #define xSemaphoreTake( xSemaphore, xBlockTime )		xQueueGenericReceive( ( xQueueHandle ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )\n  196  \n  197  /**\n  198   * semphr. h\n  199:  * xSemaphoreTakeRecursive(\n  200:  *                          xSemaphoreHandle xMutex,\n  201   *                          portTickType xBlockTime\n  202   *                        )\n  ...\n  204   * <i>Macro</i> to recursively obtain, or 'take', a mutex type semaphore.\n  205   * The mutex must have previously been created using a call to\n  206:  * xSemaphoreCreateRecursiveMutex();\n  207   *\n  208   * configUSE_RECURSIVE_MUTEXES must be set to 1 in FreeRTOSConfig.h for this\n  209   * macro to be available.\n  210   *\n  211:  * This macro must not be used on mutexes created using xSemaphoreCreateMutex().\n  212   *\n  213   * A mutex used recursively can be 'taken' repeatedly by the owner. The mutex\n  214   * doesn't become available again until the owner has called\n  215:  * xSemaphoreGiveRecursive() for each successful 'take' request.  For example,\n  216   * if a task successfully 'takes' the same mutex 5 times then the mutex will\n  217   * not be available to any other task until it has also  'given' the mutex back\n  ...\n  219   *\n  220   * @param xMutex A handle to the mutex being obtained.  This is the\n  221:  * handle returned by xSemaphoreCreateRecursiveMutex();\n  222   *\n  223   * @param xBlockTime The time in ticks to wait for the semaphore to become\n  224   * available.  The macro portTICK_RATE_MS can be used to convert this to a\n  225   * real time.  A block time of zero can be used to poll the semaphore.  If\n  226:  * the task already owns the semaphore then xSemaphoreTakeRecursive() will\n  227   * return immediately no matter what the value of xBlockTime.\n  228   *\n  ...\n  232   * Example usage:\n  233   <pre>\n  234:  xSemaphoreHandle xMutex = NULL;\n  235  \n  236   // A task that creates a mutex.\n  ...\n  238   {\n  239      // Create the mutex to guard a shared resource.\n  240:     xMutex = xSemaphoreCreateRecursiveMutex();\n  241   }\n  242  \n  ...\n  250          // See if we can obtain the mutex.  If the mutex is not available\n  251          // wait 10 ticks to see if it becomes free.	\n  252:         if( xSemaphoreTakeRecursive( xSemaphore, ( portTickType ) 10 ) == pdTRUE )\n  253          {\n  254              // We were able to obtain the mutex and can now access the\n  ...\n  257              // ...\n  258              // For some reason due to the nature of the code further calls to\n  259: 			// xSemaphoreTakeRecursive() are made on the same mutex.  In real\n  260  			// code these would not be just sequential calls as this would make\n  261  			// no sense.  Instead the calls are likely to be buried inside\n  262  			// a more complex call structure.\n  263:             xSemaphoreTakeRecursive( xMutex, ( portTickType ) 10 );\n  264:             xSemaphoreTakeRecursive( xMutex, ( portTickType ) 10 );\n  265  \n  266              // The mutex has now been 'taken' three times, so will not be\n  ...\n  269  			// these calls sequentially, but instead buried in a more complex\n  270  			// call structure.  This is just for illustrative purposes.\n  271:             xSemaphoreGiveRecursive( xMutex );\n  272: 			xSemaphoreGiveRecursive( xMutex );\n  273: 			xSemaphoreGiveRecursive( xMutex );\n  274  \n  275  			// Now the mutex can be taken by other tasks.\n  ...\n  283   }\n  284   </pre>\n  285:  * \\defgroup xSemaphoreTakeRecursive xSemaphoreTakeRecursive\n  286   * \\ingroup Semaphores\n  287   */\n  288: #define xSemaphoreTakeRecursive( xMutex, xBlockTime )	xQueueTakeMutexRecursive( ( xMutex ), ( xBlockTime ) )\n  289  \n  290  \n  291  /*\n  292:  * xSemaphoreAltTake() is an alternative version of xSemaphoreTake().\n  293   *\n  294   * The source code that implements the alternative (Alt) API is much\n  ...\n  301   * sacrifices execution speed to ensure better interrupt responsiveness.\n  302   */\n  303: #define xSemaphoreAltTake( xSemaphore, xBlockTime )		xQueueAltGenericReceive( ( xQueueHandle ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )\n  304  \n  305  /**\n  306   * semphr. h\n  307:  * <pre>xSemaphoreGive( xSemaphoreHandle xSemaphore )</pre>\n  308   *\n  309   * <i>Macro</i> to release a semaphore.  The semaphore must have previously been\n  310:  * created with a call to vSemaphoreCreateBinary(), xSemaphoreCreateMutex() or\n  311:  * xSemaphoreCreateCounting(). and obtained using sSemaphoreTake().\n  312   *\n  313:  * This macro must not be used from an ISR.  See xSemaphoreGiveFromISR () for\n  314   * an alternative which can be used from an ISR.\n  315   *\n  316   * This macro must also not be used on semaphores created using\n  317:  * xSemaphoreCreateRecursiveMutex().\n  318   *\n  319:  * @param xSemaphore A handle to the semaphore being released.  This is the\n  320   * handle returned when the semaphore was created.\n  321   *\n  ...\n  327   * Example usage:\n  328   <pre>\n  329:  xSemaphoreHandle xSemaphore = NULL;\n  330  \n  331   void vATask( void * pvParameters )\n  332   {\n  333      // Create the semaphore to guard a shared resource.\n  334:     vSemaphoreCreateBinary( xSemaphore );\n  335  \n  336:     if( xSemaphore != NULL )\n  337      {\n  338:         if( xSemaphoreGive( xSemaphore ) != pdTRUE )\n  339          {\n  340              // We would expect this call to fail because we cannot give\n  ...\n  344          // Obtain the semaphore - don't block if the semaphore is not\n  345          // immediately available.\n  346:         if( xSemaphoreTake( xSemaphore, ( portTickType ) 0 ) )\n  347          {\n  348              // We now have the semaphore and can access the shared resource.\n  ...\n  352              // We have finished accessing the shared resource so can free the\n  353              // semaphore.\n  354:             if( xSemaphoreGive( xSemaphore ) != pdTRUE )\n  355              {\n  356                  // We would not expect this call to fail because we must have\n  ...\n  361   }\n  362   </pre>\n  363:  * \\defgroup xSemaphoreGive xSemaphoreGive\n  364   * \\ingroup Semaphores\n  365   */\n  366: #define xSemaphoreGive( xSemaphore )		xQueueGenericSend( ( xQueueHandle ) ( xSemaphore ), NULL, semGIVE_BLOCK_TIME, queueSEND_TO_BACK )\n  367  \n  368  /**\n  369   * semphr. h\n  370:  * <pre>xSemaphoreGiveRecursive( xSemaphoreHandle xMutex )</pre>\n  371   *\n  372   * <i>Macro</i> to recursively release, or 'give', a mutex type semaphore.\n  373   * The mutex must have previously been created using a call to\n  374:  * xSemaphoreCreateRecursiveMutex();\n  375   *\n  376   * configUSE_RECURSIVE_MUTEXES must be set to 1 in FreeRTOSConfig.h for this\n  377   * macro to be available.\n  378   *\n  379:  * This macro must not be used on mutexes created using xSemaphoreCreateMutex().\n  380   *\n  381   * A mutex used recursively can be 'taken' repeatedly by the owner. The mutex\n  382   * doesn't become available again until the owner has called\n  383:  * xSemaphoreGiveRecursive() for each successful 'take' request.  For example,\n  384   * if a task successfully 'takes' the same mutex 5 times then the mutex will\n  385   * not be available to any other task until it has also  'given' the mutex back\n  ...\n  387   *\n  388   * @param xMutex A handle to the mutex being released, or 'given'.  This is the\n  389:  * handle returned by xSemaphoreCreateMutex();\n  390   *\n  391   * @return pdTRUE if the semaphore was given.\n  ...\n  393   * Example usage:\n  394   <pre>\n  395:  xSemaphoreHandle xMutex = NULL;\n  396  \n  397   // A task that creates a mutex.\n  ...\n  399   {\n  400      // Create the mutex to guard a shared resource.\n  401:     xMutex = xSemaphoreCreateRecursiveMutex();\n  402   }\n  403  \n  ...\n  411          // See if we can obtain the mutex.  If the mutex is not available\n  412          // wait 10 ticks to see if it becomes free.	\n  413:         if( xSemaphoreTakeRecursive( xMutex, ( portTickType ) 10 ) == pdTRUE )\n  414          {\n  415              // We were able to obtain the mutex and can now access the\n  ...\n  418              // ...\n  419              // For some reason due to the nature of the code further calls to\n  420: 			// xSemaphoreTakeRecursive() are made on the same mutex.  In real\n  421  			// code these would not be just sequential calls as this would make\n  422  			// no sense.  Instead the calls are likely to be buried inside\n  423  			// a more complex call structure.\n  424:             xSemaphoreTakeRecursive( xMutex, ( portTickType ) 10 );\n  425:             xSemaphoreTakeRecursive( xMutex, ( portTickType ) 10 );\n  426  \n  427              // The mutex has now been 'taken' three times, so will not be\n  ...\n  429  			// three times.  Again it is unlikely that real code would have\n  430  			// these calls sequentially, it would be more likely that the calls\n  431: 			// to xSemaphoreGiveRecursive() would be called as a call stack\n  432  			// unwound.  This is just for demonstrative purposes.\n  433:             xSemaphoreGiveRecursive( xMutex );\n  434: 			xSemaphoreGiveRecursive( xMutex );\n  435: 			xSemaphoreGiveRecursive( xMutex );\n  436  \n  437  			// Now the mutex can be taken by other tasks.\n  ...\n  445   }\n  446   </pre>\n  447:  * \\defgroup xSemaphoreGiveRecursive xSemaphoreGiveRecursive\n  448   * \\ingroup Semaphores\n  449   */\n  450: #define xSemaphoreGiveRecursive( xMutex )	xQueueGiveMutexRecursive( ( xMutex ) )\n  451  \n  452  /*\n  453:  * xSemaphoreAltGive() is an alternative version of xSemaphoreGive().\n  454   *\n  455   * The source code that implements the alternative (Alt) API is much\n  ...\n  462   * sacrifices execution speed to ensure better interrupt responsiveness.\n  463   */\n  464: #define xSemaphoreAltGive( xSemaphore )		xQueueAltGenericSend( ( xQueueHandle ) ( xSemaphore ), NULL, semGIVE_BLOCK_TIME, queueSEND_TO_BACK )\n  465  \n  466  /**\n  467   * semphr. h\n  468   * <pre>\n  469:  xSemaphoreGiveFromISR(\n  470:                           xSemaphoreHandle xSemaphore,\n  471                            signed portBASE_TYPE *pxHigherPriorityTaskWoken\n  472                        )</pre>\n  473   *\n  474   * <i>Macro</i> to  release a semaphore.  The semaphore must have previously been\n  475:  * created with a call to vSemaphoreCreateBinary() or xSemaphoreCreateCounting().\n  476   *\n  477:  * Mutex type semaphores (those created using a call to xSemaphoreCreateMutex())\n  478   * must not be used with this macro.\n  479   *\n  480   * This macro can be used from an ISR.\n  481   *\n  482:  * @param xSemaphore A handle to the semaphore being released.  This is the\n  483   * handle returned when the semaphore was created.\n  484   *\n  485:  * @param pxHigherPriorityTaskWoken xSemaphoreGiveFromISR() will set\n  486   * *pxHigherPriorityTaskWoken to pdTRUE if giving the semaphore caused a task\n  487   * to unblock, and the unblocked task has a priority higher than the currently\n  488:  * running task.  If xSemaphoreGiveFromISR() sets this value to pdTRUE then\n  489   * a context switch should be requested before the interrupt is exited.\n  490   *\n  ...\n  495   \\#define LONG_TIME 0xffff\n  496   \\#define TICKS_TO_WAIT	10\n  497:  xSemaphoreHandle xSemaphore = NULL;\n  498  \n  499   // Repetitive task.\n  ...\n  506  \n  507          // Block waiting for the semaphore to become available.\n  508:         if( xSemaphoreTake( xSemaphore, LONG_TIME ) == pdTRUE )\n  509          {\n  510              // It is time to execute.\n  ...\n  536      {\n  537          // Unblock the task by releasing the semaphore.\n  538:         xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );\n  539  \n  540          // Reset the count so we release the semaphore again in 10 ticks time.\n  ...\n  550   }\n  551   </pre>\n  552:  * \\defgroup xSemaphoreGiveFromISR xSemaphoreGiveFromISR\n  553   * \\ingroup Semaphores\n  554   */\n  555: #define xSemaphoreGiveFromISR( xSemaphore, pxHigherPriorityTaskWoken )			xQueueGenericSendFromISR( ( xQueueHandle ) ( xSemaphore ), NULL, ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )\n  556  \n  557  /**\n  558   * semphr. h\n  559:  * <pre>xSemaphoreHandle xSemaphoreCreateMutex( void )</pre>\n  560   *\n  561   * <i>Macro</i> that implements a mutex semaphore by using the existing queue\n  562   * mechanism.\n  563   *\n  564:  * Mutexes created using this macro can be accessed using the xSemaphoreTake()\n  565:  * and xSemaphoreGive() macros.  The xSemaphoreTakeRecursive() and\n  566:  * xSemaphoreGiveRecursive() macros should not be used.\n  567   *\n  568   * This type of semaphore uses a priority inheritance mechanism so a task\n  ...\n  577   * service routines.\n  578   *\n  579:  * @return xSemaphore Handle to the created mutex semaphore.  Should be of type\n  580:  *		xSemaphoreHandle.\n  581   *\n  582   * Example usage:\n  583   <pre>\n  584:  xSemaphoreHandle xSemaphore;\n  585  \n  586   void vATask( void * pvParameters )\n  587   {\n  588:     // Semaphore cannot be used before a call to xSemaphoreCreateMutex().\n  589      // This is a macro so pass the variable in directly.\n  590:     xSemaphore = xSemaphoreCreateMutex();\n  591  \n  592:     if( xSemaphore != NULL )\n  593      {\n  594          // The semaphore was created successfully.\n  ...\n  600   * \\ingroup Semaphores\n  601   */\n  602: #define xSemaphoreCreateMutex() xQueueCreateMutex( queueQUEUE_TYPE_MUTEX )\n  603  \n  604  \n  605  /**\n  606   * semphr. h\n  607:  * <pre>xSemaphoreHandle xSemaphoreCreateRecursiveMutex( void )</pre>\n  608   *\n  609   * <i>Macro</i> that implements a recursive mutex by using the existing queue\n  ...\n  611   *\n  612   * Mutexes created using this macro can be accessed using the\n  613:  * xSemaphoreTakeRecursive() and xSemaphoreGiveRecursive() macros.  The\n  614:  * xSemaphoreTake() and xSemaphoreGive() macros should not be used.\n  615   *\n  616   * A mutex used recursively can be 'taken' repeatedly by the owner. The mutex\n  617   * doesn't become available again until the owner has called\n  618:  * xSemaphoreGiveRecursive() for each successful 'take' request.  For example,\n  619   * if a task successfully 'takes' the same mutex 5 times then the mutex will\n  620   * not be available to any other task until it has also  'given' the mutex back\n  ...\n  632   * service routines.\n  633   *\n  634:  * @return xSemaphore Handle to the created mutex semaphore.  Should be of type\n  635:  *		xSemaphoreHandle.\n  636   *\n  637   * Example usage:\n  638   <pre>\n  639:  xSemaphoreHandle xSemaphore;\n  640  \n  641   void vATask( void * pvParameters )\n  642   {\n  643:     // Semaphore cannot be used before a call to xSemaphoreCreateMutex().\n  644      // This is a macro so pass the variable in directly.\n  645:     xSemaphore = xSemaphoreCreateRecursiveMutex();\n  646  \n  647:     if( xSemaphore != NULL )\n  648      {\n  649          // The semaphore was created successfully.\n  ...\n  655   * \\ingroup Semaphores\n  656   */\n  657: #define xSemaphoreCreateRecursiveMutex() xQueueCreateMutex( queueQUEUE_TYPE_RECURSIVE_MUTEX )\n  658  \n  659  /**\n  660   * semphr. h\n  661:  * <pre>xSemaphoreHandle xSemaphoreCreateCounting( unsigned portBASE_TYPE uxMaxCount, unsigned portBASE_TYPE uxInitialCount )</pre>\n  662   *\n  663   * <i>Macro</i> that creates a counting semaphore by using the existing\n  ...\n  697   * Example usage:\n  698   <pre>\n  699:  xSemaphoreHandle xSemaphore;\n  700  \n  701   void vATask( void * pvParameters )\n  702   {\n  703:  xSemaphoreHandle xSemaphore = NULL;\n  704  \n  705:     // Semaphore cannot be used before a call to xSemaphoreCreateCounting().\n  706      // The max value to which the semaphore can count should be 10, and the\n  707      // initial value assigned to the count should be 0.\n  708:     xSemaphore = xSemaphoreCreateCounting( 10, 0 );\n  709  \n  710:     if( xSemaphore != NULL )\n  711      {\n  712          // The semaphore was created successfully.\n  ...\n  715   }\n  716   </pre>\n  717:  * \\defgroup xSemaphoreCreateCounting xSemaphoreCreateCounting\n  718   * \\ingroup Semaphores\n  719   */\n  720: #define xSemaphoreCreateCounting( uxMaxCount, uxInitialCount ) xQueueCreateCountingSemaphore( ( uxMaxCount ), ( uxInitialCount ) )\n  721  \n  722  /**\n  723   * semphr. h\n  724:  * <pre>void vSemaphoreDelete( xSemaphoreHandle xSemaphore );</pre>\n  725   *\n  726   * Delete a semaphore.  This function must be used with care.  For example,\n  727   * do not delete a mutex type semaphore if the mutex is held by a task.\n  728   *\n  729:  * @param xSemaphore A handle to the semaphore to be deleted.\n  730   *\n  731   * \\page vSemaphoreDelete vSemaphoreDelete\n  732   * \\ingroup Semaphores\n  733   */\n  734: #define vSemaphoreDelete( xSemaphore ) vQueueDelete( ( xQueueHandle ) ( xSemaphore ) )\n  735  \n  736  /**\n  737   * semphr.h\n  738:  * <pre>xTaskHandle xSemaphoreGetMutexHolder( xSemaphoreHandle xMutex );</pre>\n  739   *\n  740   * If xMutex is indeed a mutex type semaphore, return the current mutex holder.\n  ...\n  747   * being tested.\n  748   */\n  749: #define xSemaphoreGetMutexHolder( xSemaphore ) xQueueGetMutexHolder( ( xSemaphore ) )\n  750  \n  751  #endif /* SEMAPHORE_H */\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/ethernetif.c:\n   71  \n   72  static struct netif *s_pxNetIf = NULL;\n   73: xSemaphoreHandle s_xSemaphore = NULL;\n   74  \n   75  \n   ..\n  126  \n  127    /* create binary semaphore used for informing ethernetif of frame reception */\n  128:   if (s_xSemaphore == NULL)\n  129    {\n  130:     vSemaphoreCreateBinary(s_xSemaphore);\n  131:     xSemaphoreTake( s_xSemaphore, 0);\n  132    }\n  133  \n  ...\n  185  static err_t low_level_output(struct netif *netif, struct pbuf *p)\n  186  {\n  187:   static xSemaphoreHandle xTxSemaphore = NULL;\n  188    struct pbuf *q;\n  189    u8 *buffer ;\n  ...\n  194    uint32_t payloadoffset = 0;\n  195  \n  196:   if (xTxSemaphore == NULL)\n  197    {\n  198:     vSemaphoreCreateBinary (xTxSemaphore);\n  199    }\n  200  \n  201:   if (xSemaphoreTake(xTxSemaphore, netifGUARD_BLOCK_TIME))\n  202    {\n  203      DmaTxDesc = DMATxDescToSet;\n  ...\n  251    error:\n  252  \n  253:     xSemaphoreGive(xTxSemaphore);\n  254    }\n  255  \n  ...\n  361    for( ;; )\n  362    {\n  363:     if (xSemaphoreTake( s_xSemaphore, emacBLOCK_TIME_WAITING_FOR_INPUT)==pdTRUE)\n  364      {\n  365  TRY_GET_NEXT_FRAME:\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/sys_arch.c:\n  233  	if(count == 0)	// Means it can't be taken\n  234  	{\n  235: 		xSemaphoreTake(*sem,1);\n  236  	}\n  237  \n  ...\n  270  	if(	timeout != 0)\n  271  	{\n  272: 		if( xSemaphoreTake( *sem, timeout / portTICK_RATE_MS ) == pdTRUE )\n  273  		{\n  274  			EndTime = xTaskGetTickCount();\n  ...\n  284  	else // must block without a timeout\n  285  	{\n  286: 		while( xSemaphoreTake(*sem, portMAX_DELAY) != pdTRUE){}\n  287  		EndTime = xTaskGetTickCount();\n  288  		Elapsed = (EndTime - StartTime) * portTICK_RATE_MS;\n  ...\n  297  void sys_sem_signal(sys_sem_t *sem)\n  298  {\n  299: 	xSemaphoreGive(*sem);\n  300  }\n  301  \n  ...\n  340  err_t sys_mutex_new(sys_mutex_t *mutex) {\n  341  \n  342:   *mutex = xSemaphoreCreateMutex();\n  343  		if(*mutex == NULL)\n  344  	{\n  ...\n  378  void sys_mutex_unlock(sys_mutex_t *mutex)\n  379  {\n  380: 	xSemaphoreGive(*mutex);\n  381  }\n  382  #endif /*LWIP_COMPAT_MUTEX*/\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/FreeRTOS/sys_arch.h:\n   39  \n   40  #define SYS_MBOX_NULL (xQueueHandle)0\n   41: #define SYS_SEM_NULL  (xSemaphoreHandle)0\n   42  #define SYS_DEFAULT_THREAD_STACK_DEPTH	configMINIMAL_STACK_SIZE\n   43  \n   44: typedef xSemaphoreHandle sys_sem_t;\n   45  typedef xQueueHandle sys_mbox_t;\n   46  typedef xTaskHandle sys_thread_t;\n\n/home/victor/Dropbox/OSRF/ros2_embedded/rtos/lwip-1.4.1/port/STM32F4x7/arch/sys_arch.h:\n   39  \n   40  #define SYS_MBOX_NULL (xQueueHandle)0\n   41: #define SYS_SEM_NULL  (xSemaphoreHandle)0\n   42  #define SYS_DEFAULT_THREAD_STACK_DEPTH	configMINIMAL_STACK_SIZE\n   43  \n   44: typedef xSemaphoreHandle sys_sem_t;\n   45: typedef xSemaphoreHandle sys_mutex_t;\n   46  typedef xQueueHandle sys_mbox_t;\n   47  typedef xTaskHandle sys_thread_t;\n\n371 matches across 16 files\n",
+			"settings":
+			{
+				"buffer_size": 51046,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "rtos/FreeRTOS/include/semphr.h",
+			"settings":
+			{
+				"buffer_size": 29358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rtos/FreeRTOS/include/task.h",
+			"settings":
+			{
+				"buffer_size": 46842,
 				"line_ending": "Unix"
 			}
 		}
@@ -200,6 +307,26 @@
 	},
 	"file_history":
 	[
+		"/home/victor/Dropbox/OSRF/ros2_embedded/In file included from /home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_auth.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_auth.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/plugins/nsecplug/sp_access.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/nsec/sec_p_dtls.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/stm32_p103.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/tools/smaps",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds_seq.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/dds/dds_debug.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c",
+		"/home/victor/Dropbox/dds/api/headers/dds/dds_security.h",
+		"/home/victor/Dropbox/rtos/FreeRTOS/include/task.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/portable/GCC/ARM_CM3_MPU/port.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/tasks.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/api/ta_seq.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/test/api/ta_aux.c",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/tools/openocd-source/TODO",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/headers/poll.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/In file included from /home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h",
+		"/home/victor/Dropbox/rtos/FreeRTOS/include/FreeRTOS.h",
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/examples/Make.defs",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/Makefile",
@@ -208,15 +335,12 @@
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/apps/Make.defs",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/networking/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/System.map",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dds/dds.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/thread.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/win.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/xcdr.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/nuttx/nuttx/Makefile.unix",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/main.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/sock.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/api/headers/dds/dds_debug.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/dcps/dcps_reader.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/dds/src/include/cdr.h",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/chat/co/sock.c",
@@ -310,24 +434,7 @@
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/main.c",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/Makefile",
 		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/STM32F4xx_StdPeriph_Driver/inc/misc.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/stm32_p103.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stm32f4xx_it.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/serial_debug.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/main.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/peripherals/Makefile",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/console.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/console.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/main.bin",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo-lwIP/src/stm32f4x7_eth_bsp.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Include/stm32f4xx.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/CMSIS/STM32F4x7/Device/ST/STM32F4xx/Include/system_stm32f4xx.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/netconf.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/stm32f4x7_eth_bsp.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/queue.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/list.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/rtos/FreeRTOS/timers.c",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/stm32f4x7_eth_conf.h",
-		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo/src/udpecho.c"
+		"/home/victor/Dropbox/OSRF/ros2_embedded/app/echo2/stm32_p103.c"
 	],
 	"find":
 	{
@@ -350,6 +457,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"xSemaphore",
+			"mutex",
+			"LOCK_STATIC_INIT",
+			"LITTLE_ENDIAN",
+			"BYTE_ORDER",
+			"LITTLE_ENDIAN",
+			"sp_auth",
+			"MPU_xTaskGenericCreate",
+			"xTaskGenericCreate",
+			"^[(digit)*].*",
+			"^([digit]*).*",
+			"^[digit]*",
+			"^[\\n]*",
+			"^[\\1]*",
+			"^[\\1]+",
+			"^[1]+",
+			"^[1-9]+",
+			"^[1-9]+.*",
+			"#define POLLIN",
+			"POLLIN",
+			"thread_create",
+			"#define( )+thread_create",
+			"#define thread_create",
+			"thread_create",
+			"thread_t",
+			"task",
+			"FREE_RTOS",
 			"#define	thread_t",
 			"#define thread_t",
 			"#define( )+thread_t",
@@ -450,34 +584,7 @@
 			"setup_hardware",
 			"console_init",
 			"startup_stm32f4xx",
-			"Main_task",
-			"headers",
-			"inc",
-			"ETH_DMABMR_SR",
-			"ETH_NVIC_Config",
-			"ETH_NVIC_Config()",
-			"udp",
-			"tcpip_init",
-			"LwIP_Init",
-			"sys_thread_new",
-			"ETH_BSP_Config",
-			"sys_thread_new",
-			"configCPU_CLOCK_HZ",
-			"configMINIMAL_STACK_SIZE",
-			"waiting for PHY to wake up..",
-			"USE_DHCP",
-			"toogleLED",
-			"LED",
-			"LED1",
-			"sys_thread_new",
-			"udpecho_init",
-			"ETH_Delay",
-			"0",
-			"}\n",
-			"PORTB_PHY_RESET",
-			"();\n",
-			"GPIOC",
-			"vTaskStartScheduler"
+			"Main_task"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -496,24 +603,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/chat/Makefile",
+					"file": "app/networking/Makefile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6154,
+						"buffer_size": 2872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								1219,
+								1219
 							]
 						],
 						"settings":
@@ -525,24 +632,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/chat/chat_msg.h",
-					"semi_transient": true,
+					"file": "app/networking/src/main.c",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2278,
+						"buffer_size": 2973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1813,
+								1813
 							]
 						],
 						"settings":
@@ -551,17 +658,1763 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1650.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rtos/FreeRTOS/tasks.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 78220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75207,
+								75207
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 51066.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
 		},
 		{
+			"selected": 10,
 			"sheets":
 			[
+				{
+					"buffer": 3,
+					"file": "app/chat/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5308,
+								5308
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2640.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "dds/src/include/sys.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5937,
+								5937
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2962.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/chat/headers/endian.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_name": "#ifndef ENDIAN_H",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "dds/src/dds/dds.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4257,
+								4257
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2830.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/chat/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								633,
+								633
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "dds/src/include/win.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1457,
+								1457
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 395.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "dds/src/include/thread.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5806,
+								5806
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2706.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "dds/api/headers/dds/dds_security.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								751,
+								751
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "dds/plugins/nsecplug/sp_auth.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								576,
+								576
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 51046,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										244,
+										251
+									],
+									[
+										696,
+										703
+									],
+									[
+										1059,
+										1066
+									],
+									[
+										1167,
+										1174
+									],
+									[
+										1462,
+										1469
+									],
+									[
+										1835,
+										1842
+									],
+									[
+										2209,
+										2216
+									],
+									[
+										2583,
+										2590
+									],
+									[
+										2957,
+										2964
+									],
+									[
+										3330,
+										3337
+									],
+									[
+										3707,
+										3714
+									],
+									[
+										4083,
+										4090
+									],
+									[
+										4391,
+										4398
+									],
+									[
+										4570,
+										4577
+									],
+									[
+										4743,
+										4750
+									],
+									[
+										4868,
+										4875
+									],
+									[
+										5043,
+										5050
+									],
+									[
+										5088,
+										5095
+									],
+									[
+										5277,
+										5284
+									],
+									[
+										5322,
+										5329
+									],
+									[
+										5504,
+										5511
+									],
+									[
+										5549,
+										5556
+									],
+									[
+										5775,
+										5782
+									],
+									[
+										5820,
+										5827
+									],
+									[
+										5984,
+										5991
+									],
+									[
+										6147,
+										6154
+									],
+									[
+										6378,
+										6385
+									],
+									[
+										6476,
+										6483
+									],
+									[
+										6504,
+										6511
+									],
+									[
+										6637,
+										6644
+									],
+									[
+										6800,
+										6807
+									],
+									[
+										7002,
+										7009
+									],
+									[
+										7211,
+										7218
+									],
+									[
+										7392,
+										7399
+									],
+									[
+										7638,
+										7645
+									],
+									[
+										7844,
+										7851
+									],
+									[
+										8009,
+										8016
+									],
+									[
+										8139,
+										8146
+									],
+									[
+										8308,
+										8315
+									],
+									[
+										8474,
+										8481
+									],
+									[
+										8653,
+										8660
+									],
+									[
+										8936,
+										8943
+									],
+									[
+										9142,
+										9149
+									],
+									[
+										9406,
+										9413
+									],
+									[
+										9815,
+										9822
+									],
+									[
+										10149,
+										10156
+									],
+									[
+										10568,
+										10575
+									],
+									[
+										10902,
+										10909
+									],
+									[
+										11241,
+										11248
+									],
+									[
+										11341,
+										11348
+									],
+									[
+										11473,
+										11480
+									],
+									[
+										11724,
+										11731
+									],
+									[
+										12009,
+										12016
+									],
+									[
+										12343,
+										12350
+									],
+									[
+										12766,
+										12773
+									],
+									[
+										13100,
+										13107
+									],
+									[
+										13500,
+										13507
+									],
+									[
+										13834,
+										13841
+									],
+									[
+										14159,
+										14166
+									],
+									[
+										14404,
+										14411
+									],
+									[
+										14518,
+										14525
+									],
+									[
+										14705,
+										14712
+									],
+									[
+										15099,
+										15115
+									],
+									[
+										15293,
+										15309
+									],
+									[
+										15497,
+										15513
+									],
+									[
+										15779,
+										15795
+									],
+									[
+										15938,
+										15954
+									],
+									[
+										16299,
+										16309
+									],
+									[
+										16497,
+										16507
+									],
+									[
+										16793,
+										16803
+									],
+									[
+										17053,
+										17063
+									],
+									[
+										17259,
+										17269
+									],
+									[
+										17475,
+										17485
+									],
+									[
+										17711,
+										17721
+									],
+									[
+										17945,
+										17955
+									],
+									[
+										18180,
+										18190
+									],
+									[
+										18428,
+										18438
+									],
+									[
+										18643,
+										18653
+									],
+									[
+										18661,
+										18671
+									],
+									[
+										18900,
+										18910
+									],
+									[
+										18919,
+										18929
+									],
+									[
+										19066,
+										19076
+									],
+									[
+										19317,
+										19327
+									],
+									[
+										19454,
+										19464
+									],
+									[
+										19471,
+										19481
+									],
+									[
+										19659,
+										19669
+									],
+									[
+										19676,
+										19686
+									],
+									[
+										19851,
+										19861
+									],
+									[
+										19869,
+										19879
+									],
+									[
+										20134,
+										20144
+									],
+									[
+										20394,
+										20404
+									],
+									[
+										20543,
+										20553
+									],
+									[
+										20568,
+										20578
+									],
+									[
+										20888,
+										20898
+									],
+									[
+										20914,
+										20924
+									],
+									[
+										21099,
+										21109
+									],
+									[
+										21242,
+										21252
+									],
+									[
+										21324,
+										21334
+									],
+									[
+										21349,
+										21359
+									],
+									[
+										21756,
+										21766
+									],
+									[
+										21775,
+										21785
+									],
+									[
+										21801,
+										21811
+									],
+									[
+										21827,
+										21837
+									],
+									[
+										22054,
+										22064
+									],
+									[
+										22086,
+										22096
+									],
+									[
+										22267,
+										22277
+									],
+									[
+										22292,
+										22302
+									],
+									[
+										22582,
+										22592
+									],
+									[
+										22780,
+										22790
+									],
+									[
+										23076,
+										23086
+									],
+									[
+										23336,
+										23346
+									],
+									[
+										23596,
+										23606
+									],
+									[
+										23792,
+										23802
+									],
+									[
+										23976,
+										23986
+									],
+									[
+										24346,
+										24356
+									],
+									[
+										24544,
+										24554
+									],
+									[
+										24837,
+										24847
+									],
+									[
+										25094,
+										25104
+									],
+									[
+										25305,
+										25315
+									],
+									[
+										25545,
+										25555
+									],
+									[
+										26052,
+										26062
+									],
+									[
+										26205,
+										26215
+									],
+									[
+										26299,
+										26309
+									],
+									[
+										26566,
+										26576
+									],
+									[
+										26660,
+										26670
+									],
+									[
+										26842,
+										26852
+									],
+									[
+										26877,
+										26887
+									],
+									[
+										26907,
+										26917
+									],
+									[
+										27245,
+										27255
+									],
+									[
+										27315,
+										27325
+									],
+									[
+										27359,
+										27369
+									],
+									[
+										27677,
+										27687
+									],
+									[
+										27852,
+										27862
+									],
+									[
+										27869,
+										27879
+									],
+									[
+										28214,
+										28224
+									],
+									[
+										28266,
+										28276
+									],
+									[
+										28329,
+										28339
+									],
+									[
+										28404,
+										28414
+									],
+									[
+										28421,
+										28431
+									],
+									[
+										28672,
+										28682
+									],
+									[
+										28709,
+										28719
+									],
+									[
+										28887,
+										28897
+									],
+									[
+										28983,
+										28993
+									],
+									[
+										29134,
+										29144
+									],
+									[
+										29241,
+										29251
+									],
+									[
+										29259,
+										29269
+									],
+									[
+										29409,
+										29419
+									],
+									[
+										29453,
+										29463
+									],
+									[
+										29470,
+										29480
+									],
+									[
+										29722,
+										29732
+									],
+									[
+										29759,
+										29769
+									],
+									[
+										29814,
+										29824
+									],
+									[
+										29979,
+										29989
+									],
+									[
+										29996,
+										30006
+									],
+									[
+										30181,
+										30191
+									],
+									[
+										30277,
+										30287
+									],
+									[
+										30479,
+										30489
+									],
+									[
+										30495,
+										30505
+									],
+									[
+										30781,
+										30791
+									],
+									[
+										30797,
+										30807
+									],
+									[
+										30899,
+										30909
+									],
+									[
+										30914,
+										30924
+									],
+									[
+										30985,
+										30995
+									],
+									[
+										31001,
+										31011
+									],
+									[
+										31068,
+										31078
+									],
+									[
+										31163,
+										31173
+									],
+									[
+										31223,
+										31233
+									],
+									[
+										31509,
+										31519
+									],
+									[
+										31743,
+										31753
+									],
+									[
+										31941,
+										31951
+									],
+									[
+										32308,
+										32318
+									],
+									[
+										32649,
+										32659
+									],
+									[
+										32812,
+										32822
+									],
+									[
+										32987,
+										32997
+									],
+									[
+										33205,
+										33215
+									],
+									[
+										33230,
+										33240
+									],
+									[
+										33501,
+										33511
+									],
+									[
+										33778,
+										33788
+									],
+									[
+										33853,
+										33863
+									],
+									[
+										34169,
+										34179
+									],
+									[
+										34214,
+										34224
+									],
+									[
+										34259,
+										34269
+									],
+									[
+										34409,
+										34419
+									],
+									[
+										34433,
+										34443
+									],
+									[
+										34513,
+										34523
+									],
+									[
+										34650,
+										34660
+									],
+									[
+										34699,
+										34709
+									],
+									[
+										34915,
+										34925
+									],
+									[
+										34934,
+										34944
+									],
+									[
+										35004,
+										35014
+									],
+									[
+										35104,
+										35114
+									],
+									[
+										35120,
+										35130
+									],
+									[
+										35137,
+										35147
+									],
+									[
+										35313,
+										35323
+									],
+									[
+										35350,
+										35360
+									],
+									[
+										35481,
+										35491
+									],
+									[
+										35657,
+										35667
+									],
+									[
+										35718,
+										35728
+									],
+									[
+										35905,
+										35915
+									],
+									[
+										35922,
+										35932
+									],
+									[
+										36100,
+										36110
+									],
+									[
+										36137,
+										36147
+									],
+									[
+										36190,
+										36200
+									],
+									[
+										36206,
+										36216
+									],
+									[
+										36470,
+										36480
+									],
+									[
+										36486,
+										36496
+									],
+									[
+										36769,
+										36779
+									],
+									[
+										36785,
+										36795
+									],
+									[
+										36967,
+										36977
+									],
+									[
+										36982,
+										36992
+									],
+									[
+										37053,
+										37063
+									],
+									[
+										37069,
+										37079
+									],
+									[
+										37121,
+										37131
+									],
+									[
+										37235,
+										37245
+									],
+									[
+										37260,
+										37270
+									],
+									[
+										37464,
+										37474
+									],
+									[
+										37698,
+										37708
+									],
+									[
+										37896,
+										37906
+									],
+									[
+										38275,
+										38285
+									],
+									[
+										38416,
+										38426
+									],
+									[
+										38591,
+										38601
+									],
+									[
+										38809,
+										38819
+									],
+									[
+										39101,
+										39111
+									],
+									[
+										39378,
+										39388
+									],
+									[
+										39453,
+										39463
+									],
+									[
+										39772,
+										39782
+									],
+									[
+										39913,
+										39923
+									],
+									[
+										39958,
+										39968
+									],
+									[
+										40003,
+										40013
+									],
+									[
+										40153,
+										40163
+									],
+									[
+										40177,
+										40187
+									],
+									[
+										40257,
+										40267
+									],
+									[
+										40358,
+										40368
+									],
+									[
+										40407,
+										40417
+									],
+									[
+										40623,
+										40633
+									],
+									[
+										40642,
+										40652
+									],
+									[
+										40697,
+										40707
+									],
+									[
+										40820,
+										40830
+									],
+									[
+										40876,
+										40886
+									],
+									[
+										40893,
+										40903
+									],
+									[
+										41183,
+										41193
+									],
+									[
+										41284,
+										41294
+									],
+									[
+										41436,
+										41446
+									],
+									[
+										41613,
+										41623
+									],
+									[
+										41845,
+										41855
+									],
+									[
+										42071,
+										42081
+									],
+									[
+										42088,
+										42098
+									],
+									[
+										42247,
+										42257
+									],
+									[
+										42263,
+										42273
+									],
+									[
+										42458,
+										42468
+									],
+									[
+										42481,
+										42491
+									],
+									[
+										42667,
+										42677
+									],
+									[
+										42689,
+										42699
+									],
+									[
+										42767,
+										42777
+									],
+									[
+										42790,
+										42800
+									],
+									[
+										42877,
+										42887
+									],
+									[
+										43002,
+										43012
+									],
+									[
+										43019,
+										43029
+									],
+									[
+										43250,
+										43260
+									],
+									[
+										43281,
+										43291
+									],
+									[
+										43311,
+										43321
+									],
+									[
+										43351,
+										43361
+									],
+									[
+										43557,
+										43567
+									],
+									[
+										43637,
+										43647
+									],
+									[
+										43712,
+										43722
+									],
+									[
+										43729,
+										43739
+									],
+									[
+										43858,
+										43868
+									],
+									[
+										43958,
+										43968
+									],
+									[
+										43971,
+										43981
+									],
+									[
+										44019,
+										44029
+									],
+									[
+										44173,
+										44183
+									],
+									[
+										44302,
+										44312
+									],
+									[
+										44319,
+										44329
+									],
+									[
+										44554,
+										44564
+									],
+									[
+										44584,
+										44594
+									],
+									[
+										44633,
+										44643
+									],
+									[
+										44654,
+										44664
+									],
+									[
+										44871,
+										44881
+									],
+									[
+										45180,
+										45190
+									],
+									[
+										45260,
+										45270
+									],
+									[
+										45335,
+										45345
+									],
+									[
+										45352,
+										45362
+									],
+									[
+										45481,
+										45491
+									],
+									[
+										45581,
+										45591
+									],
+									[
+										45594,
+										45604
+									],
+									[
+										45651,
+										45661
+									],
+									[
+										45805,
+										45815
+									],
+									[
+										45945,
+										45955
+									],
+									[
+										45962,
+										45972
+									],
+									[
+										46211,
+										46221
+									],
+									[
+										46228,
+										46238
+									],
+									[
+										46309,
+										46319
+									],
+									[
+										46326,
+										46336
+									],
+									[
+										46409,
+										46419
+									],
+									[
+										46594,
+										46604
+									],
+									[
+										46607,
+										46617
+									],
+									[
+										46665,
+										46675
+									],
+									[
+										46808,
+										46818
+									],
+									[
+										46833,
+										46843
+									],
+									[
+										46914,
+										46924
+									],
+									[
+										47114,
+										47124
+									],
+									[
+										47131,
+										47141
+									],
+									[
+										47350,
+										47360
+									],
+									[
+										47536,
+										47546
+									],
+									[
+										47582,
+										47592
+									],
+									[
+										47662,
+										47672
+									],
+									[
+										47688,
+										47698
+									],
+									[
+										47874,
+										47884
+									],
+									[
+										47900,
+										47910
+									],
+									[
+										47937,
+										47947
+									],
+									[
+										48148,
+										48158
+									],
+									[
+										48167,
+										48177
+									],
+									[
+										48319,
+										48329
+									],
+									[
+										48386,
+										48396
+									],
+									[
+										48410,
+										48420
+									],
+									[
+										48428,
+										48438
+									],
+									[
+										48568,
+										48578
+									],
+									[
+										48587,
+										48597
+									],
+									[
+										48719,
+										48729
+									],
+									[
+										48787,
+										48797
+									],
+									[
+										48832,
+										48842
+									],
+									[
+										48849,
+										48859
+									],
+									[
+										48976,
+										48986
+									],
+									[
+										48993,
+										49003
+									],
+									[
+										49076,
+										49086
+									],
+									[
+										49094,
+										49104
+									],
+									[
+										49351,
+										49361
+									],
+									[
+										49448,
+										49458
+									],
+									[
+										49640,
+										49650
+									],
+									[
+										49856,
+										49866
+									],
+									[
+										49976,
+										49986
+									],
+									[
+										50111,
+										50121
+									],
+									[
+										50356,
+										50366
+									],
+									[
+										50469,
+										50479
+									],
+									[
+										50750,
+										50760
+									],
+									[
+										50863,
+										50873
+									],
+									[
+										50906,
+										50916
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								45949,
+								45949
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 25212.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "rtos/FreeRTOS/include/semphr.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22368,
+								22368
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11997.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "rtos/FreeRTOS/include/task.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46842,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46468,
+								46468
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 28416.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -593,7 +2446,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.469028625058,
 			1.0
 		],
 		"rows":
@@ -602,7 +2455,7 @@
 			1.0
 		]
 	},
-	"menu_visible": true,
+	"menu_visible": false,
 	"output.exec":
 	{
 		"height": 453.0
@@ -626,6 +2479,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"dds.",
+				"dds/src/dds/dds.c"
+			],
+			[
+				"sp_auth",
+				"dds/plugins/nsecplug/sp_auth.h"
+			],
+			[
+				"dds_security",
+				"dds/api/headers/dds/dds_security.h"
+			],
+			[
+				"task.",
+				"rtos/FreeRTOS/include/task.h"
+			],
 			[
 				"dcps_reader.c",
 				"dds/src/dcps/dcps_reader.c"
