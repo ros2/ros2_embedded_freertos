@@ -1,6 +1,6 @@
 
 ![](https://avatars3.githubusercontent.com/u/3979232?v=2&s=200)
-#ROS 2 for embedded devices
+#ROS 2.0 prototype for embedded devices using FreeRTOS
 
 This prototype includes:
 
